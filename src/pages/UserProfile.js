@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import "./UserProfile.css";
 import logo from "../assets/logo.png";
 import { FaUpload, FaPlus } from "react-icons/fa";
-import * as pdfjsLib from "pdfjs-dist";
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
+import { useNavigate } from "react-router-dom";
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
-
-
+pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
 const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 function UserProfile() {
+  const navigate = useNavigate(); // ✅ moved inside component
+
   const [education, setEducation] = useState("Lorem ipsum...");
   const [research, setResearch] = useState("Lorem ipsum...");
   const [experience, setExperience] = useState("Lorem ipsum...");
@@ -115,10 +115,15 @@ function UserProfile() {
       {/* Top Bar */}
       <header className="top-bar">
         <div className="top-bar-left">
-          <img src={logo} alt="Logo" className="top-bar-logo" />
+          <img
+            src={logo}
+            alt="Logo"
+            className="top-bar-logo"
+            onClick={() => navigate("/")}
+            style={{ cursor: "pointer" }}
+          />
         </div>
 
-        {/* PDF Upload */}
         <div className="upload-wrapper">
           <input
             type="file"
@@ -135,7 +140,6 @@ function UserProfile() {
         </div>
       </header>
 
-      {/* Main content */}
       <main className="profile-main">
         <div className="top-actions">
           <button className="save-btn" onClick={handleSave}>
