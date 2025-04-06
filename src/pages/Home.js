@@ -11,7 +11,6 @@ function Home() {
       {/* Top Bar */}
       <header className="top-bar">
         <img src={logo} alt="ApplyPhD logo" className="top-bar-logo" />
-        <h1 className="top-bar-title">ApplyPhD</h1>
         <div className="top-bar-profile">
           <FaUserCircle className="profile-icon" />
           <span>Edit Profile</span>
