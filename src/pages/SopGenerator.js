@@ -5,6 +5,7 @@ import { FaUserCircle, FaDownload } from "react-icons/fa";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
 import { useNavigate } from "react-router-dom";
 
+// Set the worker for PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
 const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
@@ -25,12 +26,9 @@ function SopGenerator() {
   const [sopRefinement, setSopRefinement] = useState("");
   const [sopFile, setSopFile] = useState(null);
   const [sopOutput, setSopOutput] = useState("");
+  const [loading, setLoading] = useState(false); // 🌀 Spinner state
 
-  const professorOptions = [
-    "Andrew Head",
-    "Danaë Metaxa",
-    "Chris Callison-Burch",
-  ];
+  const professorOptions = ["Andrew Head", "Danaë Metaxa", "Chris Callison-Burch"];
   const researchInterestOptions = [
     "HCI",
     "Programming",
@@ -85,26 +83,28 @@ function SopGenerator() {
     setSopFile(e.target.files[0]);
   };
 
-  const extractPDFText = async (arrayBuffer) => {
+  // Extract PDF text using pdf.js
+  const extractPDFText = async (file) => {
+    const arrayBuffer = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-    let fullText = "";
 
+    let fullText = "";
     for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       const page = await pdf.getPage(pageNum);
       const content = await page.getTextContent();
       const strings = content.items.map((item) => item.str);
       fullText += strings.join(" ") + "\n\n";
     }
-
     return fullText;
   };
 
   const handleGenerateSOP = async () => {
+    setLoading(true); // Show spinner
+
     try {
       let fileContent = "";
       if (sopFile) {
-        const arrayBuffer = await sopFile.arrayBuffer();
-        fileContent = await extractPDFText(arrayBuffer);
+        fileContent = await extractPDFText(sopFile);
       }
 
       const prompt = `
@@ -113,7 +113,7 @@ function SopGenerator() {
 
         Here is my current SOP draft:
         ${fileContent}
-        Output a list of specific changes that I can make to improve my SOP based on the instructions. After each piece of advice, include a line break.
+        Review the SOP and provide a list of specific changes that I can make to improve my SOP based on the instructions. After each piece of advice, include a line break.
       `;
 
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -141,11 +141,22 @@ function SopGenerator() {
     } catch (error) {
       console.error("Error generating SOP:", error);
       alert("There was an error generating your SOP. Please try again.");
+    } finally {
+      setLoading(false); // Hide spinner
     }
   };
 
   return (
     <div className="sop-page">
+      {/* Spinner */}
+      {loading && (
+        <div className="spinner-overlay">
+          <div className="spinner" />
+          <p>Reviewing SOP...</p>
+        </div>
+      )}
+
+      {/* Top Bar */}
       <header className="top-bar">
         <div className="top-bar-left">
           <img src={logo} alt="Logo" className="top-bar-logo" onClick={() => navigate("/")} />
@@ -190,7 +201,7 @@ function SopGenerator() {
                     onChange={(e) =>
                       handleResearchInterestsChange(
                         row.id,
-                        Array.from(e.target.selectedOptions, (o) => o.value)
+                        Array.from(e.target.selectedOptions, (option) => option.value)
                       )
                     }
                     className="beautiful-select"
@@ -220,21 +231,16 @@ function SopGenerator() {
                   </select>
                 </td>
                 <td>
-                  <button onClick={() => removeProfessorRow(row.id)} className="delete-btn">
-                    Delete
-                  </button>
+                  <button className="delete-btn" onClick={() => removeProfessorRow(row.id)}>Delete</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-
-        <button onClick={addProfessorRow} className="add-btn">
-          Add Professor
-        </button>
+        <button onClick={addProfessorRow} className="add-btn">Add Professor</button>
 
         <section className="sop-section">
-          <h2>Tell us how do you want to refine your SOP</h2>
+          <h2>Tell us how you want to refine your SOP</h2>
           <textarea
             value={sopRefinement}
             onChange={(e) => setSopRefinement(e.target.value)}
@@ -247,9 +253,7 @@ function SopGenerator() {
             <input type="file" onChange={handleSopFileChange} className="file-input" />
           </div>
 
-          <button onClick={handleGenerateSOP} className="generate-btn">
-            Generate SOP
-          </button>
+          <button onClick={handleGenerateSOP} className="generate-btn">Generate SOP</button>
         </section>
 
         <div className="sop-output-section">
