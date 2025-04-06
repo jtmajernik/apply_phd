@@ -1,7 +1,10 @@
 .home-page {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f6f6f6;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f6f6;
+  min-height: 100vh; /* ✅ Full screen height */
+  display: flex;
+  flex-direction: column;
+}
   
   /* --- Top Bar --- */
   .top-bar {
