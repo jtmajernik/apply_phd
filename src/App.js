@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Import your pages
+import Home from "./pages/Home";
+import UserProfile from "./pages/UserProfile";
+import SopGenerator from "./pages/SopGenerator";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* If you want a nav bar, you can add it here (optional). */}
+      {/* Example: <NavBar /> */}
+
+      <Routes>
+        {/* The route path "/" points to the Home component */}
+        <Route path="/" element={<Home />} />
+
+        {/* Route for user profile */}
+        <Route path="/profile" element={<UserProfile />} />
+
+        {/* Route for SOP generator */}
+        <Route path="/sop" element={<SopGenerator />} />
+      </Routes>
+    </Router>
   );
 }
 
