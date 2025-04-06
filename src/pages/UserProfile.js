@@ -38,6 +38,19 @@ function UserProfile() {
     setTimeout(() => setShowSaveMessage(false), 2500);
   };
 
+  const handleResetFields = () => {
+    setEducation("");
+    setResearch("");
+    setExperience("");
+    setSkills("");
+    setAdditional("");
+    localStorage.removeItem("profile_education");
+    localStorage.removeItem("profile_research");
+    localStorage.removeItem("profile_experience");
+    localStorage.removeItem("profile_skills");
+    localStorage.removeItem("profile_additional");
+  };
+
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -73,7 +86,7 @@ function UserProfile() {
       const content = await page.getTextContent();
       const strings = content.items.map((item) => item.str);
       fullText += strings.join(" ") + "\n\n";
-    }
+    }  
     return fullText;
   };
 
@@ -155,6 +168,9 @@ function UserProfile() {
           <div className="save-btn-wrapper">
             <button className="save-btn" onClick={handleSave}>
               Save Changes
+            </button>
+            <button className="reset-btn" onClick={handleResetFields}>
+              Reset All Fields
             </button>
             <p className={`save-message ${showSaveMessage ? "visible" : "hidden"}`}>
               Changes saved!
