@@ -12,14 +12,21 @@ const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 function UserProfile() {
   const navigate = useNavigate(); // ✅ moved inside component
 
-  const [education, setEducation] = useState("Lorem ipsum...");
-  const [research, setResearch] = useState("Lorem ipsum...");
-  const [experience, setExperience] = useState("Lorem ipsum...");
-  const [skills, setSkills] = useState("Lorem ipsum...");
-  const [additional, setAdditional] = useState("Lorem ipsum...");
-  const [cvFileName, setCvFileName] = useState("");
+  const [education, setEducation] = useState(() => localStorage.getItem("profile_education") || "Lorem ipsum...");
+  const [research, setResearch] = useState(() => localStorage.getItem("profile_research") || "Lorem ipsum...");
+  const [experience, setExperience] = useState(() => localStorage.getItem("profile_experience") || "Lorem ipsum...");
+  const [skills, setSkills] = useState(() => localStorage.getItem("profile_skills") || "Lorem ipsum...");
+  const [additional, setAdditional] = useState(() => localStorage.getItem("profile_additional") || "Lorem ipsum...");
+  const [cvFileName, setCvFileName] = useState(() => localStorage.getItem("profile_cvFileName") || "");
 
   const handleSave = () => {
+    localStorage.setItem("profile_education", education);
+    localStorage.setItem("profile_research", research);
+    localStorage.setItem("profile_experience", experience);
+    localStorage.setItem("profile_skills", skills);
+    localStorage.setItem("profile_additional", additional);
+    localStorage.setItem("profile_cvFileName", cvFileName);
+
     console.log("Saved data:", { education, research, experience, skills, additional });
     alert("Changes saved!");
   };
@@ -79,7 +86,7 @@ function UserProfile() {
       }
       If info is missing, use an empty string.
       CV text:
-      ${text}
+      ${text} 
     `;
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -91,7 +98,7 @@ function UserProfile() {
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: prompt }],
-        temperature: 0,
+        temperature: 0, 
       }),
     });
 
@@ -153,26 +160,41 @@ function UserProfile() {
           <div className="left-col">
             <div className="section">
               <h3>Education History:</h3>
-              <textarea value={education} onChange={(e) => setEducation(e.target.value)} />
+              <textarea value={education} onChange={(e) => {
+                setEducation(e.target.value);
+                localStorage.setItem("profile_education", e.target.value);
+              }} />
             </div>
             <div className="section">
               <h3>Research:</h3>
-              <textarea value={research} onChange={(e) => setResearch(e.target.value)} />
+              <textarea value={research} onChange={(e) => {
+                setResearch(e.target.value);
+                localStorage.setItem("profile_research", e.target.value);
+              }} />
             </div>
             <div className="section">
               <h3>Experience:</h3>
-              <textarea value={experience} onChange={(e) => setExperience(e.target.value)} />
+              <textarea value={experience} onChange={(e) => {
+                setExperience(e.target.value);
+                localStorage.setItem("profile_experience", e.target.value);
+              }} />
             </div>
           </div>
 
           <div className="right-col">
             <div className="section">
               <h3>Skills:</h3>
-              <textarea value={skills} onChange={(e) => setSkills(e.target.value)} />
+              <textarea value={skills} onChange={(e) => {
+                setSkills(e.target.value);
+                localStorage.setItem("profile_skills", e.target.value);
+              }} />
             </div>
             <div className="section">
               <h3>Additional Information:</h3>
-              <textarea value={additional} onChange={(e) => setAdditional(e.target.value)} />
+              <textarea value={additional} onChange={(e) => {
+                setAdditional(e.target.value);
+                localStorage.setItem("profile_additional", e.target.value);
+              }} />
             </div>
           </div>
         </div>
