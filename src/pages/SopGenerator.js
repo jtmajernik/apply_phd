@@ -16,8 +16,8 @@ function SopGenerator() {
   const [professorsData, setProfessorsData] = useState([
     {
       id: Date.now(),
-      name: "",
-      researchInterests: [],
+      name: "Andrew Head",
+      researchInterests: ["HCI"],
       program: "CIS PhD",
       interviewSent: "Not Sure",
     },
@@ -26,15 +26,10 @@ function SopGenerator() {
   const [sopRefinement, setSopRefinement] = useState("");
   const [sopFile, setSopFile] = useState(null);
   const [sopOutput, setSopOutput] = useState("");
-  const [loading, setLoading] = useState(false); // 🌀 Spinner state
+  const [loading, setLoading] = useState(false);
 
   const professorOptions = ["Andrew Head", "Danaë Metaxa", "Chris Callison-Burch"];
-  const researchInterestOptions = [
-    "HCI",
-    "Programming",
-    "Reading",
-    "Bias and representation in algorithmic systems",
-  ];
+  const researchInterestOptions = [ "HCI"];
 
   const handleProfessorNameChange = (id, value) => {
     setProfessorsData((prev) =>
@@ -67,8 +62,8 @@ function SopGenerator() {
   const addProfessorRow = () => {
     const newRow = {
       id: Date.now(),
-      name: "",
-      researchInterests: [],
+      name: "Andrew Head",
+      researchInterests: ["HCI"],
       program: "CIS PhD",
       interviewSent: "Not Sure",
     };
@@ -83,7 +78,6 @@ function SopGenerator() {
     setSopFile(e.target.files[0]);
   };
 
-  // Extract PDF text using pdf.js
   const extractPDFText = async (file) => {
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
@@ -99,7 +93,7 @@ function SopGenerator() {
   };
 
   const handleGenerateSOP = async () => {
-    setLoading(true); // Show spinner
+    setLoading(true);
 
     try {
       let fileContent = "";
@@ -113,7 +107,7 @@ function SopGenerator() {
 
         Here is my current SOP draft:
         ${fileContent}
-        Review the SOP and provide a list of specific changes that I can make to improve my SOP based on the instructions. After each piece of advice, include a line break.
+        Review the SOP and provide a list of specific changes that I can make to improve my SOP based on the instructions. After each piece of advice, include 2 line breaks.
       `;
 
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -142,13 +136,12 @@ function SopGenerator() {
       console.error("Error generating SOP:", error);
       alert("There was an error generating your SOP. Please try again.");
     } finally {
-      setLoading(false); // Hide spinner
+      setLoading(false);
     }
   };
 
   return (
     <div className="sop-page">
-      {/* Spinner */}
       {loading && (
         <div className="spinner-overlay">
           <div className="spinner" />
@@ -156,7 +149,6 @@ function SopGenerator() {
         </div>
       )}
 
-      {/* Top Bar */}
       <header className="top-bar">
         <div className="top-bar-left">
           <img src={logo} alt="Logo" className="top-bar-logo" onClick={() => navigate("/")} />
@@ -196,7 +188,7 @@ function SopGenerator() {
                 </td>
                 <td>
                   <select
-                    multiple
+                    
                     value={row.researchInterests}
                     onChange={(e) =>
                       handleResearchInterestsChange(
@@ -253,7 +245,7 @@ function SopGenerator() {
             <input type="file" onChange={handleSopFileChange} className="file-input" />
           </div>
 
-          <button onClick={handleGenerateSOP} className="generate-btn">Generate SOP</button>
+          <button onClick={handleGenerateSOP} className="generate-btn">Generate Recommendations</button>
         </section>
 
         <div className="sop-output-section">
