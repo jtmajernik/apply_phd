@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./UserProfile.css";
 import logo from "../assets/logo.png";
 import { FaUpload, FaPlus } from "react-icons/fa";
@@ -12,13 +12,20 @@ const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 function UserProfile() {
   const navigate = useNavigate();
 
+  // States
   const [education, setEducation] = useState(() => localStorage.getItem("profile_education") || "Lorem ipsum...");
   const [research, setResearch] = useState(() => localStorage.getItem("profile_research") || "Lorem ipsum...");
   const [experience, setExperience] = useState(() => localStorage.getItem("profile_experience") || "Lorem ipsum...");
   const [skills, setSkills] = useState(() => localStorage.getItem("profile_skills") || "Lorem ipsum...");
   const [additional, setAdditional] = useState(() => localStorage.getItem("profile_additional") || "Lorem ipsum...");
-  const [cvFileName, setCvFileName] = useState(() => localStorage.getItem("profile_cvFileName") || "");
-  const [loading, setLoading] = useState(false); // ✅ Add loading state
+  const [cvFileName, setCvFileName] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [showSaveMessage, setShowSaveMessage] = useState(false);
+
+  // Reset file name every time page is visited
+  useEffect(() => {
+    setCvFileName("");
+  }, []);
 
   const handleSave = () => {
     localStorage.setItem("profile_education", education);
@@ -26,8 +33,9 @@ function UserProfile() {
     localStorage.setItem("profile_experience", experience);
     localStorage.setItem("profile_skills", skills);
     localStorage.setItem("profile_additional", additional);
-    localStorage.setItem("profile_cvFileName", cvFileName);
-    alert("Changes saved!");
+
+    setShowSaveMessage(true);
+    setTimeout(() => setShowSaveMessage(false), 2500);
   };
 
   const handleFileUpload = async (e) => {
@@ -35,8 +43,7 @@ function UserProfile() {
     if (!file) return;
 
     setCvFileName(file.name);
-    alert(`File "${file.name}" uploaded successfully!`);
-    setLoading(true); // ✅ Start spinner
+    setLoading(true);
 
     try {
       const arrayBuffer = await file.arrayBuffer();
@@ -52,23 +59,21 @@ function UserProfile() {
       }
     } catch (err) {
       console.error("Error parsing PDF or calling GPT:", err);
-      alert("Failed to parse or get GPT data. Check console.");
+      alert("Failed to parse or get GPT data.");
     } finally {
-      setLoading(false); // ✅ Stop spinner
+      setLoading(false);
     }
   };
 
   const extractPDFText = async (arrayBuffer) => {
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
     let fullText = "";
-
     for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       const page = await pdf.getPage(pageNum);
       const content = await page.getTextContent();
       const strings = content.items.map((item) => item.str);
       fullText += strings.join(" ") + "\n\n";
     }
-
     return fullText;
   };
 
@@ -84,7 +89,7 @@ function UserProfile() {
       }
       If info is missing, use an empty string.
       CV text:
-      ${text} 
+      ${text}
     `;
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -101,18 +106,12 @@ function UserProfile() {
     });
 
     if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`OpenAI error: ${response.status} - ${errorText}`);
+      throw new Error("Failed to call OpenAI");
     }
 
     const data = await response.json();
-    const rawContent = data.choices?.[0]?.message?.content?.trim();
-
-    try {
-      return JSON.parse(rawContent);
-    } catch (err) {
-      throw new Error("Could not parse JSON from GPT response.");
-    }
+    const content = data.choices?.[0]?.message?.content?.trim();
+    return JSON.parse(content);
   };
 
   return (
@@ -153,9 +152,14 @@ function UserProfile() {
 
       <main className="profile-main">
         <div className="top-actions">
-          <button className="save-btn" onClick={handleSave}>
-            Save Changes
-          </button>
+          <div className="save-btn-wrapper">
+            <button className="save-btn" onClick={handleSave}>
+              Save Changes
+            </button>
+            <p className={`save-message ${showSaveMessage ? "visible" : "hidden"}`}>
+              Changes saved!
+            </p>
+          </div>
         </div>
 
         <h2>User Profile</h2>

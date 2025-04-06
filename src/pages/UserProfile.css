@@ -64,7 +64,8 @@
   
   .top-actions {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column; /* ⬅️ Stack vertically */
+    align-items: flex-end;  /* ⬅️ Align to right like button */
     margin-bottom: 1rem;
   }
   
@@ -172,5 +173,26 @@
     to {
       transform: rotate(360deg);
     }
+  }
+
+  .save-btn-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .save-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 0.85rem;
+    color: #2e7d32;
+    margin-top: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .save-message.visible {
+    opacity: 1;
   }
   
