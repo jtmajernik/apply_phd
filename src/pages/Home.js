@@ -58,14 +58,22 @@ function Home() {
   const [searchFilter, setSearchFilter] = useState("");
 
   const handleAddSchool = () => {
+    const trimmedSearch = searchTerm.trim();
+    if (!trimmedSearch) {
+      alert("Please enter a school name.");
+      return;
+    }
+
     const matches = schoolDB.filter(
-      (s) => s.name.toLowerCase().includes(searchTerm.toLowerCase())
+      (s) => s.name.toLowerCase().includes(trimmedSearch.toLowerCase())
     );
     const found = matches.find((s) => !schools.find((added) => added.name === s.name));
     if (found) {
       const updated = [...schools, found];
       setSchools(updated);
       localStorage.setItem("savedSchools", JSON.stringify(updated));
+    } else {
+      alert("School not found in the system.");
     }
     setSearchTerm("");
   };
@@ -89,6 +97,11 @@ function Home() {
     localStorage.setItem("savedSchools", JSON.stringify(updated));
   };
 
+  const handleResetSchools = () => {
+    localStorage.removeItem("savedSchools");
+    setSchools([]);
+  };
+
   return (
     <div className="home-page">
       {/* Top Bar */}
@@ -110,54 +123,57 @@ function Home() {
           <h2>Schools List</h2>
           <div className="search-bar">
             <input
-              type="text"
-              placeholder="Search"
-              value={searchFilter}
-              onChange={(e) => setSearchFilter(e.target.value)}
+                type="text"
+                placeholder="Search"
+                value={searchFilter}
+                onChange={(e) => setSearchFilter(e.target.value)}
             />
           </div>
         </div>
 
         {/* School Cards */}
         {schools
-          .filter((school) =>
-            school.name.toLowerCase().includes(searchFilter.toLowerCase())
-          )
-          .map((school, index) => (
-            <div className="school-card" key={index}>
-              <img src={school.logo} alt={`${school.name} logo`} className="school-logo" />
-              <div className="school-info">
-                <h3>{school.name}</h3>
-                <p><strong>Letters of Recommendation</strong></p>
-                {school.lor.map((ref, i) => (
-                  <label key={i} className="lor-entry">
-                    <input
-                      type="checkbox"
-                      checked={ref.sent}
-                      onChange={() => handleToggleLorStatus(school.name, i)}
-                    />
-                    {ref.name} — {ref.sent ? "sent ✅" : "unsent ⬛"}
-                  </label>
-                ))}
-              </div>
-              <div className="school-actions">
-                <Link to="/sop" className="sop-button-link">
-                  <button className="sop-button">SOP Maker</button>
-                </Link>
-                <FaTrashAlt className="delete-icon" onClick={() => handleDeleteSchool(school.name)} />
-              </div>
-            </div>
-          ))}
+            .filter((school) =>
+                school.name.toLowerCase().includes(searchFilter.toLowerCase())
+            )
+            .map((school, index) => (
+                <div className="school-card" key={index}>
+                  <img src={school.logo} alt={`${school.name} logo`} className="school-logo"/>
+                  <div className="school-info">
+                    <h3>{school.name}</h3>
+                    <p><strong>Letters of Recommendation</strong></p>
+                    {school.lor.map((ref, i) => (
+                        <label key={i} className="lor-entry">
+                          <input
+                              type="checkbox"
+                              checked={ref.sent}
+                              onChange={() => handleToggleLorStatus(school.name, i)}
+                          />
+                          {ref.name} — {ref.sent ? "sent ✅" : "unsent ⬛"}
+                        </label>
+                    ))}
+                  </div>
+                  <div className="school-actions">
+                    <Link to="/sop" className="sop-button-link">
+                      <button className="sop-button">SOP Maker</button>
+                    </Link>
+                    <FaTrashAlt className="delete-icon" onClick={() => handleDeleteSchool(school.name)}/>
+                  </div>
+                </div>
+            ))}
 
         {/* Add School Section */}
         <div className="add-school">
           <input
-            type="text"
-            placeholder="Enter School Name"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+              type="text"
+              placeholder="Enter School Name"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
           />
           <button onClick={handleAddSchool}>Add School</button>
+        </div>
+        <div className="reset-section">
+          <button onClick={handleResetSchools}>Reset All Schools</button>
         </div>
       </main>
     </div>
