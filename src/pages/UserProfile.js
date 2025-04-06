@@ -10,7 +10,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.j
 const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 function UserProfile() {
-  const navigate = useNavigate(); // ✅ moved inside component
+  const navigate = useNavigate();
 
   const [education, setEducation] = useState(() => localStorage.getItem("profile_education") || "Lorem ipsum...");
   const [research, setResearch] = useState(() => localStorage.getItem("profile_research") || "Lorem ipsum...");
@@ -18,6 +18,7 @@ function UserProfile() {
   const [skills, setSkills] = useState(() => localStorage.getItem("profile_skills") || "Lorem ipsum...");
   const [additional, setAdditional] = useState(() => localStorage.getItem("profile_additional") || "Lorem ipsum...");
   const [cvFileName, setCvFileName] = useState(() => localStorage.getItem("profile_cvFileName") || "");
+  const [loading, setLoading] = useState(false); // ✅ Add loading state
 
   const handleSave = () => {
     localStorage.setItem("profile_education", education);
@@ -26,8 +27,6 @@ function UserProfile() {
     localStorage.setItem("profile_skills", skills);
     localStorage.setItem("profile_additional", additional);
     localStorage.setItem("profile_cvFileName", cvFileName);
-
-    console.log("Saved data:", { education, research, experience, skills, additional });
     alert("Changes saved!");
   };
 
@@ -37,6 +36,7 @@ function UserProfile() {
 
     setCvFileName(file.name);
     alert(`File "${file.name}" uploaded successfully!`);
+    setLoading(true); // ✅ Start spinner
 
     try {
       const arrayBuffer = await file.arrayBuffer();
@@ -53,6 +53,8 @@ function UserProfile() {
     } catch (err) {
       console.error("Error parsing PDF or calling GPT:", err);
       alert("Failed to parse or get GPT data. Check console.");
+    } finally {
+      setLoading(false); // ✅ Stop spinner
     }
   };
 
@@ -71,10 +73,6 @@ function UserProfile() {
   };
 
   const sendTextToGPT = async (text) => {
-    if (!OPENAI_API_KEY) {
-      throw new Error("Missing REACT_APP_OPENAI_API_KEY.");
-    }
-
     const prompt = `
       You are an AI that parses CV text. Extract and return valid JSON of the form:
       {
@@ -98,7 +96,7 @@ function UserProfile() {
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: prompt }],
-        temperature: 0, 
+        temperature: 0,
       }),
     });
 
@@ -119,7 +117,13 @@ function UserProfile() {
 
   return (
     <div className="profile-page">
-      {/* Top Bar */}
+      {loading && (
+        <div className="spinner-overlay">
+          <div className="spinner" />
+          <p>Parsing CV...</p>
+        </div>
+      )}
+
       <header className="top-bar">
         <div className="top-bar-left">
           <img
@@ -160,41 +164,26 @@ function UserProfile() {
           <div className="left-col">
             <div className="section">
               <h3>Education History:</h3>
-              <textarea value={education} onChange={(e) => {
-                setEducation(e.target.value);
-                localStorage.setItem("profile_education", e.target.value);
-              }} />
+              <textarea value={education} onChange={(e) => setEducation(e.target.value)} />
             </div>
             <div className="section">
               <h3>Research:</h3>
-              <textarea value={research} onChange={(e) => {
-                setResearch(e.target.value);
-                localStorage.setItem("profile_research", e.target.value);
-              }} />
+              <textarea value={research} onChange={(e) => setResearch(e.target.value)} />
             </div>
             <div className="section">
               <h3>Experience:</h3>
-              <textarea value={experience} onChange={(e) => {
-                setExperience(e.target.value);
-                localStorage.setItem("profile_experience", e.target.value);
-              }} />
+              <textarea value={experience} onChange={(e) => setExperience(e.target.value)} />
             </div>
           </div>
 
           <div className="right-col">
             <div className="section">
               <h3>Skills:</h3>
-              <textarea value={skills} onChange={(e) => {
-                setSkills(e.target.value);
-                localStorage.setItem("profile_skills", e.target.value);
-              }} />
+              <textarea value={skills} onChange={(e) => setSkills(e.target.value)} />
             </div>
             <div className="section">
               <h3>Additional Information:</h3>
-              <textarea value={additional} onChange={(e) => {
-                setAdditional(e.target.value);
-                localStorage.setItem("profile_additional", e.target.value);
-              }} />
+              <textarea value={additional} onChange={(e) => setAdditional(e.target.value)} />
             </div>
           </div>
         </div>
