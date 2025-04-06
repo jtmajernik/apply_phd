@@ -10,8 +10,9 @@ const schoolDB = [
     name: "University Of Pennsylvania",
     logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Penn_Quakers_logo.svg',
     lor: [
-      { name: "Prof. Angela Zhang", sent: false },
-      { name: "Prof. Brian Lee", sent: false }
+      { name: "Prof. Andrew Head", sent: false },
+      { name: "Prof. Danae Metaxa", sent: false },
+      { name: "Prof. Chris Callison-Burch", sent: false }
     ],
   },
   {

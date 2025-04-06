@@ -1,142 +1,266 @@
+/* Basic Reset */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+}
+
+/* ========== SOP Generator Styles ========== */
+
+/* Container for the SOP Generator Page */
 .sop-page {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f5f5f5;
-    min-height: 100vh;
-  }
-  
-  /* Top Bar */
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #426E95;
-    color: white;
-    padding: 1.5rem;
-  }
-  
-  .top-bar-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .top-bar-logo {
-    height: 50px;
-    margin-right: 1rem;
-  }
-  
-  .top-bar-title {
-    font-size: 1.8rem;
-  }
-  
-  .top-bar-profile {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .profile-icon {
-    font-size: 1.8rem;
-  }
-  
-  /* Page Content */
-  .sop-main {
-    padding: 2rem;
-  }
-  
-  /* Table Headers */
-  .sop-table-header {
-    display: grid;
-    grid-template-columns: 150px 1fr 150px 150px;
-    font-weight: bold;
-    gap: 1rem;
-    background-color: #f5f5f5;
-    padding: 1rem 0;
-  }
-  
-  .sop-row {
-    display: grid;
-    grid-template-columns: 50px 150px 1fr 150px 150px;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    gap: 1rem;
-  }
-  
-  .checkbox {
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
-    background-color: #000;
-  }
-  
-  .checkbox.checked::after {
-    content: "✔";
-    color: white;
-    display: block;
-    text-align: center;
-    line-height: 24px;
-    font-size: 0.8rem;
-  }
-  
-  .prof-name {
-    font-weight: 600;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
-  /* Input + Button */
-  .sop-input-section {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .sop-input-label {
-    background-color: #dcdcdc;
-    border-radius: 10px;
-    padding: 1rem;
-    color: #333;
-  }
-  
-  .sop-button {
-    background-color: #e88b2e;
-    border: none;
-    padding: 1rem 2rem;
-    color: white;
-    font-size: 1.1rem;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-  
-  /* SOP Output Section */
-  .sop-output-section {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  
-  .sop-output-box {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    width: 60%;
-  }
-  
-  .download-icon {
-    font-size: 2rem;
-    background-color: black;
-    color: white;
-    padding: 0.75rem;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #426E95;
+  color: white;
+  padding: 1.5rem;
+}
+.top-bar-left {
+  display: flex;
+  align-items: center;
+}
+.top-bar-logo {
+  height: 50px;
+  margin-right: 1rem;
+}
+.top-bar-title {
+  font-size: 1.8rem;
+}
+.top-bar-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+.profile-icon {
+  font-size: 1.8rem;
+}
+
+/* Main Content for SOP Generator */
+.sop-main {
+  padding: 2rem;
+}
+
+/* Table Headers and Rows for SOP Generator */
+.sop-table-header {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px 150px;
+  font-weight: bold;
+  gap: 1rem;
+  background-color: #f5f5f5;
+  padding: 1rem 0;
+}
+.sop-row {
+  display: grid;
+  grid-template-columns: 50px 150px 1fr 150px 150px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-color: #000;
+}
+.checkbox.checked::after {
+  content: "✔";
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 24px;
+  font-size: 0.8rem;
+}
+.prof-name {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Input + Button Section in SOP Generator */
+.sop-input-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.sop-input-label {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #333;
+}
+.sop-button {
+  background-color: #e88b2e;
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* SOP Output Section */
+.sop-output-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.sop-output-box {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 60%;
+}
+.download-icon {
+  font-size: 2rem;
+  background-color: black;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ========== App and Global Component Styles ========== */
+
+/* Header Styling */
+.header {
+  background-color: #426e94;
+  color: #fff;
+  padding: 20px 40px;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Table Styling */
+.professor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.professor-table th,
+.professor-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.professor-table th {
+  background-color: #426e94;
+  color: #fff;
+}
+
+/* Beautiful Dropdown Styling */
+.beautiful-select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 1rem;
+}
+
+/* Button Styling */
+.add-btn, .delete-btn, .generate-btn {
+  background-color: #426e94;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-btn {
+  margin-top: 10px;
+}
+.add-btn:hover,
+.delete-btn:hover,
+.generate-btn:hover {
+  background-color: #315f75;
+}
+
+/* SOP Section (App) Styling */
+.sop-section {
+  margin-top: 40px;
+}
+.sop-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #426e94;
+}
+.sop-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+.sop-upload {
+  margin-bottom: 15px;
+}
+.file-label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+  color: #426e94;
+  font-weight: bold;
+}
+.file-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
