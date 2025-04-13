@@ -116,9 +116,9 @@ body, html, #root {
 /* SOP Output Section */
 .sop-output-section {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;  /* Center the output horizontally */
+  margin-top: 20px;
 }
 .sop-output-box {
   background-color: white;
@@ -126,17 +126,7 @@ body, html, #root {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   width: 60%;
-}
-.download-icon {
-  font-size: 2rem;
-  background-color: black;
-  color: white;
-  padding: 0.75rem;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  text-align: left;
 }
 
 /* ========== App and Global Component Styles ========== */
@@ -221,9 +211,6 @@ body, html, #root {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.add-btn {
-  margin-top: 10px;
-}
 .add-btn:hover,
 .delete-btn:hover,
 .generate-btn:hover {
@@ -233,11 +220,15 @@ body, html, #root {
 /* SOP Section (App) Styling */
 .sop-section {
   margin-top: 40px;
+  width: 60%; /* Adjust width as needed */
+  margin-left: auto;
+  margin-right: auto;
 }
 .sop-section h2 {
   font-size: 1.4rem;
   margin-bottom: 15px;
   color: #426e94;
+  text-align: center; /* Centering the header text */
 }
 .sop-textarea {
   width: 100%;
@@ -249,23 +240,17 @@ body, html, #root {
   resize: vertical;
   margin-bottom: 15px;
 }
-.sop-upload {
-  margin-bottom: 15px;
-}
-.file-label {
-  font-size: 1rem;
-  margin-bottom: 5px;
+
+/* Remove previous file upload styles if not used */
+/* .sop-upload { ... } */
+
+/* Centering the Generate Recommendations Button */
+.generate-btn {
   display: block;
-  color: #426e94;
-  font-weight: bold;
-}
-.file-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  margin: 20px auto;
 }
 
-
+/* Spinner Styles */
 .spinner-overlay {
   position: fixed;
   top: 0;
@@ -296,4 +281,44 @@ body, html, #root {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ========== New Centering Styles ========== */
+
+/* Container for centering the button and subsequent content */
+.center-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Centering the Add Professor Button */
+.center-button {
+  display: block;
+  margin: 20px auto;
+}
+
+/* ========== Fancy Drag & Drop File Upload Styles ========== */
+.dropzone {
+  border: 2px dashed #426e94;
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.dropzone.dragover {
+  background-color: #eef5ff;
+}
+.sop-output-box p {
+  white-space: pre-line;
+}
+.sop-output-box h3 {
+  text-align: center;
 }
