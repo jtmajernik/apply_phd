@@ -3,7 +3,7 @@ import "./SopGenerator.css";
 import logo from "../assets/logo.png";
 import { FaUserCircle } from "react-icons/fa";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 // Set the worker for PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
@@ -214,11 +214,13 @@ Review the SOP and provide a list of specific changes that I can make to improve
             className="top-bar-logo"
             onClick={() => navigate("/")}
           />
-        </div>
-        <div className="top-bar-profile">
-          <FaUserCircle className="profile-icon" />
-          <span>Edit Profile</span>
-        </div>
+        </div> 
+        <Link to="/profile" className="top-bar-profile-link">
+          <div className="top-bar-profile">
+            <FaUserCircle className="profile-icon" />
+            <span>Edit Profile</span>
+          </div>
+        </Link>
       </header>
 
       <main className="sop-main">
