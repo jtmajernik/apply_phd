@@ -62,12 +62,6 @@
     margin-bottom: 2rem;
   }
   
-  .top-actions {
-    display: flex;
-    flex-direction: column; /* ⬅️ Stack vertically */
-    align-items: flex-end;  /* ⬅️ Align to right like button */
-    margin-bottom: 1rem;
-  }
   
   .save-btn {
     background-color: #426E95;
@@ -191,6 +185,63 @@
     transition: opacity 0.3s ease;
     pointer-events: none;
   }
+  
+  .save-message.visible {
+    opacity: 1;
+  }
+  
+  .reset-btn {
+    background-color: #426E95;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-left: 1rem; /* Optional: adds space between buttons */
+  }
+  
+  .reset-btn:hover {
+    background-color: #2e5170;
+  }
+  
+  .top-bar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .top-bar-row h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .top-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .save-btn-wrapper {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .save-message {
+    position: absolute;
+    top: 110%;
+    left: 23%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #2e7d32;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  
   
   .save-message.visible {
     opacity: 1;

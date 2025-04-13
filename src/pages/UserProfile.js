@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./UserProfile.css";
 import logo from "../assets/logo.png";
-import { FaUpload, FaPlus } from "react-icons/fa";
+import { FaUpload } from "react-icons/fa";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
 import { useNavigate } from "react-router-dom";
 
@@ -11,20 +11,20 @@ const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 function UserProfile() {
   const navigate = useNavigate();
+  const fileInputRef = useRef(null);
+  const [fileInputKey, setFileInputKey] = useState(0);
 
-  // States
   const [education, setEducation] = useState(() => localStorage.getItem("profile_education") || "Lorem ipsum...");
   const [research, setResearch] = useState(() => localStorage.getItem("profile_research") || "Lorem ipsum...");
   const [experience, setExperience] = useState(() => localStorage.getItem("profile_experience") || "Lorem ipsum...");
   const [skills, setSkills] = useState(() => localStorage.getItem("profile_skills") || "Lorem ipsum...");
+  const [interests, setInterests] = useState(() => localStorage.getItem("profile_interests") || "Lorem ipsum...");
   const [additional, setAdditional] = useState(() => localStorage.getItem("profile_additional") || "Lorem ipsum...");
-  const [cvFileName, setCvFileName] = useState("");
   const [loading, setLoading] = useState(false);
   const [showSaveMessage, setShowSaveMessage] = useState(false);
 
-  // Reset file name every time page is visited
   useEffect(() => {
-    setCvFileName("");
+    // This effect is empty as per original code
   }, []);
 
   const handleSave = () => {
@@ -32,10 +32,11 @@ function UserProfile() {
     localStorage.setItem("profile_research", research);
     localStorage.setItem("profile_experience", experience);
     localStorage.setItem("profile_skills", skills);
+    localStorage.setItem("profile_interests", interests);
     localStorage.setItem("profile_additional", additional);
 
     setShowSaveMessage(true);
-    setTimeout(() => setShowSaveMessage(false), 2500);
+    setTimeout(() => setShowSaveMessage(false), 3000);
   };
 
   const handleResetFields = () => {
@@ -43,11 +44,22 @@ function UserProfile() {
     setResearch("");
     setExperience("");
     setSkills("");
+    setInterests("");
     setAdditional("");
+    
+    // Reset the file input element
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+    
+    // Increment fileInputKey to force re-render of the file input
+    setFileInputKey(prevKey => prevKey + 1);
+    
     localStorage.removeItem("profile_education");
     localStorage.removeItem("profile_research");
     localStorage.removeItem("profile_experience");
     localStorage.removeItem("profile_skills");
+    localStorage.removeItem("profile_interests");
     localStorage.removeItem("profile_additional");
   };
 
@@ -55,7 +67,6 @@ function UserProfile() {
     const file = e.target.files[0];
     if (!file) return;
 
-    setCvFileName(file.name);
     setLoading(true);
 
     try {
@@ -63,18 +74,40 @@ function UserProfile() {
       const extractedText = await extractPDFText(arrayBuffer);
       const parsedData = await sendTextToGPT(extractedText);
 
+      console.log("Received parsed data:", parsedData);
+
       if (parsedData) {
+        // For each field, check if it exists and is not empty
         if (parsedData.education) setEducation(parsedData.education);
         if (parsedData.research) setResearch(parsedData.research);
         if (parsedData.experience) setExperience(parsedData.experience);
         if (parsedData.skills) setSkills(parsedData.skills);
-        if (parsedData.additional) setAdditional(parsedData.additional);
+        
+        // Explicitly handle interests and additional with extra logging
+        console.log("Interests data:", parsedData.interests);
+        console.log("Additional data:", parsedData.additional);
+        
+        if (parsedData.interests && parsedData.interests.trim() !== "") {
+          setInterests(parsedData.interests);
+        }
+        
+        if (parsedData.additional && parsedData.additional.trim() !== "") {
+          setAdditional(parsedData.additional);
+        }
       }
     } catch (err) {
       console.error("Error parsing PDF or calling GPT:", err);
       alert("Failed to parse or get GPT data.");
     } finally {
       setLoading(false);
+      
+      // Reset the file input element to allow re-uploading the same file
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+      
+      // Increment fileInputKey to force re-render of the file input
+      setFileInputKey(prevKey => prevKey + 1);
     }
   };
 
@@ -86,7 +119,7 @@ function UserProfile() {
       const content = await page.getTextContent();
       const strings = content.items.map((item) => item.str);
       fullText += strings.join(" ") + "\n\n";
-    }  
+    }
     return fullText;
   };
 
@@ -98,9 +131,19 @@ function UserProfile() {
         "research": "...",
         "experience": "...",
         "skills": "...",
+        "interests": "...",
         "additional": "..."
       }
-      If info is missing, use an empty string.
+      
+      IMPORTANT INSTRUCTIONS:
+      - For "interests", guess what the user's interests are based on the CV.
+      - Look for sections labeled "Interests", "Hobbies", "Personal Interests", or similar headings.
+      - If interests are mentioned anywhere in the CV, even in an "Additional Information" or similar section, extract them and place them in the "interests" field.
+      - For "additional", include any miscellaneous information that doesn't fit into the other categories.
+      - Even if you're unsure about a section, make your best guess and include the information.
+      - If info is completely missing for any field, use an empty string.
+      - Ensure your response is valid JSON that can be parsed directly.
+      
       CV text:
       ${text}
     `;
@@ -122,9 +165,37 @@ function UserProfile() {
       throw new Error("Failed to call OpenAI");
     }
 
-    const data = await response.json();
-    const content = data.choices?.[0]?.message?.content?.trim();
-    return JSON.parse(content);
+    try {
+      const data = await response.json();
+      const content = data.choices?.[0]?.message?.content?.trim();
+      
+      // Log the raw content for debugging
+      console.log("Raw GPT response:", content);
+      
+      // Parse with error handling
+      try {
+        return JSON.parse(content);
+      } catch (parseError) {
+        console.error("Error parsing JSON from GPT response:", parseError);
+        console.log("Attempting to clean and parse the response...");
+        
+        // Try to extract just the JSON part (in case there's extra text)
+        const jsonMatch = content.match(/\{[\s\S]*\}/);
+        if (jsonMatch) {
+          try {
+            return JSON.parse(jsonMatch[0]);
+          } catch (secondError) {
+            console.error("Still failed to parse JSON after cleaning:", secondError);
+            throw new Error("Could not parse GPT response as JSON");
+          }
+        } else {
+          throw new Error("No JSON object found in GPT response");
+        }
+      }
+    } catch (error) {
+      console.error("Error processing GPT response:", error);
+      throw error;
+    }
   };
 
   return (
@@ -149,36 +220,32 @@ function UserProfile() {
 
         <div className="upload-wrapper">
           <input
+            key={fileInputKey}
             type="file"
             accept=".pdf"
             id="cvUpload"
             style={{ display: "none" }}
             onChange={handleFileUpload}
+            ref={fileInputRef}
           />
           <label htmlFor="cvUpload" className="upload-btn">
             <FaUpload style={{ marginRight: "0.5rem" }} />
             Upload CV
           </label>
-          {cvFileName && <p className="file-label">Uploaded: {cvFileName}</p>}
         </div>
       </header>
 
       <main className="profile-main">
-        <div className="top-actions">
-          <div className="save-btn-wrapper">
-            <button className="save-btn" onClick={handleSave}>
-              Save Changes
-            </button>
-            <button className="reset-btn" onClick={handleResetFields}>
-              Reset All Fields
-            </button>
-            <p className={`save-message ${showSaveMessage ? "visible" : "hidden"}`}>
-              Changes saved!
-            </p>
+        <div className="top-bar-row">
+          <h2>User Profile</h2>
+          <div className="top-actions">
+            <div className="save-btn-wrapper">
+              <button className="save-btn" onClick={handleSave}>Save Changes</button>
+              <button className="reset-btn" onClick={handleResetFields}>Reset Fields</button>
+              <p className={`save-message ${showSaveMessage ? "visible" : ""}`}>Changes saved!</p>
+            </div>
           </div>
         </div>
-
-        <h2>User Profile</h2>
 
         <div className="profile-grid">
           <div className="left-col">
@@ -202,15 +269,14 @@ function UserProfile() {
               <textarea value={skills} onChange={(e) => setSkills(e.target.value)} />
             </div>
             <div className="section">
+              <h3>Interests:</h3>
+              <textarea value={interests} onChange={(e) => setInterests(e.target.value)} />
+            </div>
+            <div className="section">
               <h3>Additional Information:</h3>
               <textarea value={additional} onChange={(e) => setAdditional(e.target.value)} />
             </div>
           </div>
-        </div>
-
-        <div className="add-section">
-          <FaPlus className="plus-icon" />
-          <span>Add Sections</span>
         </div>
       </main>
     </div>
