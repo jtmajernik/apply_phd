@@ -5,6 +5,25 @@ import pennLogo from "../assets/penn_logo.png"; // Add these images to your asse
 import { FaUserCircle, FaSearch, FaTrashAlt, FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+const steps = [
+  {
+    target: '.top-bar-logo',
+    content: 'This is the logo that takes you back to the homepage.',
+  },
+  {
+    target: '.sop-button',
+    content: 'Click here to access the SOP Maker to help with your application essays.',
+  },
+  {
+    target: '.add-school input',
+    content: 'Type the name of a school here to add it to your list.',
+  },
+  {
+    target: '.reset-section button',
+    content: 'Click here to reset your saved schools.',
+  },
+];
+
 const schoolDB = [
   {
     name: "University Of Pennsylvania",
@@ -46,6 +65,30 @@ const schoolDB = [
       { name: "Prof. Irene Kim", sent: false },
       { name: "Prof. James Park", sent: false }
     ],
+  },
+  {
+    name: "Columbia University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/02/Columbia_Lions_wordmark.png",
+    lor: [
+      { name: "Prof. Robert Smith", sent: false },
+      { name: "Prof. Sarah Connor", sent: false }
+    ]
+  },
+  {
+    name: "Yale University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Yale_University_logo.svg",
+    lor: [
+      { name: "Prof. Michael Johnson", sent: false },
+      { name: "Prof. Linda White", sent: false }
+    ]
+  },
+  {
+    name: "Cornell University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Cornell_%22C%22_logo.svg",
+    lor: [
+      { name: "Prof. William Brown", sent: false },
+      { name: "Prof. Emma Davis", sent: false }
+    ]
   }
 ];
 
@@ -102,6 +145,18 @@ function Home() {
     setSchools([]);
   };
 
+  const availableSchools = schoolDB.filter(
+    (school) => !schools.find((added) => added.name === school.name)
+  );
+
+  const handleAddAvailableSchool = (school) => {
+    if (!schools.find((s) => s.name === school.name)) {
+      const updated = [...schools, school];
+      setSchools(updated);
+      localStorage.setItem("savedSchools", JSON.stringify(updated));
+    }
+  };
+
   return (
     <div className="home-page">
       {/* Top Bar */}
@@ -155,7 +210,7 @@ function Home() {
                   </div>
                   <div className="school-actions">
                     <Link to="/sop" className="sop-button-link">
-                      <button className="sop-button">SOP Maker</button>
+                      <button className="sop-button">SOP Tool</button>
                     </Link>
                     <FaTrashAlt className="delete-icon" onClick={() => handleDeleteSchool(school.name)}/>
                   </div>
@@ -175,6 +230,26 @@ function Home() {
         <div className="reset-section">
           <button onClick={handleResetSchools}>Reset All Schools</button>
         </div>
+
+        {availableSchools.length > 0 && (
+          <div className="available-schools-section">
+            <h2>Available Schools</h2>
+            <div className="available-schools">
+              {availableSchools.map((school, idx) => (
+                <div className="school-card" key={`available-${idx}`}>
+                  <img src={school.logo} alt={`${school.name} logo`} className="school-logo" />
+                  <div className="school-info">
+                    <h3>{school.name}</h3>
+                    <p>{school.lor.length} Letters of Recommendation</p>
+                  </div>
+                  <div className="school-actions">
+                    <button onClick={() => handleAddAvailableSchool(school)}><FaPlus/></button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
