@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import { FaUpload } from "react-icons/fa";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
 import { useNavigate } from "react-router-dom";
+import Joyride from "react-joyride";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
@@ -22,6 +23,22 @@ function UserProfile() {
   const [additional, setAdditional] = useState(() => localStorage.getItem("profile_additional") || "Lorem ipsum...");
   const [loading, setLoading] = useState(false);
   const [showSaveMessage, setShowSaveMessage] = useState(false);
+  const [tutorialActive, setTutorialActive] = useState(false);
+
+  const tutorialSteps = [
+    {
+      target: '.upload-btn',
+      content: 'Click here to upload your CV for automatic profile filling.',
+    },
+    {
+      target: '.top-bar-row',
+      content: 'This section displays your User Profile header and save/reset actions.',
+    },
+    {
+      target: '.profile-grid',
+      content: 'Edit your profile details in these fields.',
+    },
+  ];
 
   useEffect(() => {
     // This effect is empty as per original code
@@ -46,15 +63,15 @@ function UserProfile() {
     setSkills("");
     setInterests("");
     setAdditional("");
-    
+
     // Reset the file input element
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
-    
+
     // Increment fileInputKey to force re-render of the file input
     setFileInputKey(prevKey => prevKey + 1);
-    
+
     localStorage.removeItem("profile_education");
     localStorage.removeItem("profile_research");
     localStorage.removeItem("profile_experience");
@@ -82,15 +99,15 @@ function UserProfile() {
         if (parsedData.research) setResearch(parsedData.research);
         if (parsedData.experience) setExperience(parsedData.experience);
         if (parsedData.skills) setSkills(parsedData.skills);
-        
+
         // Explicitly handle interests and additional with extra logging
         console.log("Interests data:", parsedData.interests);
         console.log("Additional data:", parsedData.additional);
-        
+
         if (parsedData.interests && parsedData.interests.trim() !== "") {
           setInterests(parsedData.interests);
         }
-        
+
         if (parsedData.additional && parsedData.additional.trim() !== "") {
           setAdditional(parsedData.additional);
         }
@@ -100,12 +117,12 @@ function UserProfile() {
       alert("Failed to parse or get GPT data.");
     } finally {
       setLoading(false);
-      
+
       // Reset the file input element to allow re-uploading the same file
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
-      
+
       // Increment fileInputKey to force re-render of the file input
       setFileInputKey(prevKey => prevKey + 1);
     }
@@ -168,17 +185,17 @@ function UserProfile() {
     try {
       const data = await response.json();
       const content = data.choices?.[0]?.message?.content?.trim();
-      
+
       // Log the raw content for debugging
       console.log("Raw GPT response:", content);
-      
+
       // Parse with error handling
       try {
         return JSON.parse(content);
       } catch (parseError) {
         console.error("Error parsing JSON from GPT response:", parseError);
         console.log("Attempting to clean and parse the response...");
-        
+
         // Try to extract just the JSON part (in case there's extra text)
         const jsonMatch = content.match(/\{[\s\S]*\}/);
         if (jsonMatch) {
@@ -200,6 +217,21 @@ function UserProfile() {
 
   return (
     <div className="profile-page">
+      {tutorialActive && (
+        <Joyride
+          steps={tutorialSteps}
+          run={tutorialActive}
+          continuous={true}
+          showSkipButton={true}
+          callback={(data) => {
+            const { status } = data;
+            if (status === 'finished' || status === 'skipped') {
+              setTutorialActive(false);
+            }
+          }}
+        />
+      )}
+
       {loading && (
         <div className="spinner-overlay">
           <div className="spinner" />
@@ -236,8 +268,16 @@ function UserProfile() {
       </header>
 
       <main className="profile-main">
-        <div className="top-bar-row">
-          <h2>User Profile</h2>
+        <div className="top-bar-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <h2 style={{ margin: 0 }}>User Profile</h2>
+            <button
+              onClick={() => setTutorialActive(true)}
+              style={{ padding: '0.5rem 1rem' }}
+            >
+              Show Tutorial
+            </button>
+          </div>
           <div className="top-actions">
             <div className="save-btn-wrapper">
               <button className="save-btn" onClick={handleSave}>Save Changes</button>

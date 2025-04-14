@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### In order to show tutorials, you need to install react-joyride with the command:
+```angular2html
+npm i react-joyride@next 
+```
 In the project directory, you can run:
 
 ### `npm start`

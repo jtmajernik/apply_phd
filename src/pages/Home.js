@@ -4,25 +4,7 @@ import logo from "../assets/logo.png";
 import pennLogo from "../assets/penn_logo.png"; // Add these images to your assets folder
 import { FaUserCircle, FaSearch, FaTrashAlt, FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-const steps = [
-  {
-    target: '.top-bar-logo',
-    content: 'This is the logo that takes you back to the homepage.',
-  },
-  {
-    target: '.sop-button',
-    content: 'Click here to access the SOP Maker to help with your application essays.',
-  },
-  {
-    target: '.add-school input',
-    content: 'Type the name of a school here to add it to your list.',
-  },
-  {
-    target: '.reset-section button',
-    content: 'Click here to reset your saved schools.',
-  },
-];
+import Joyride from "react-joyride";
 
 const schoolDB = [
   {
@@ -99,6 +81,38 @@ function Home() {
   });
   const [searchTerm, setSearchTerm] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
+  const [tutorialActive, setTutorialActive] = useState(false);
+  const [tutorialPartTwoActive, setTutorialPartTwoActive] = useState(false);
+
+  const tutorialPartOne = [
+    {
+      target: '.top-bar-logo',
+      content: 'This is the logo that takes you back to the homepage.',
+    },
+    {
+      target: '.top-bar-profile-link',
+      content: 'Click here to edit your profile.',
+    },
+    {
+      target: '.search-bar',
+      content: 'Use this search bar to filter your added schools.',
+    },
+    {
+      target: '.add-school input',
+      content: 'Type the name of a school here to add it to your list.',
+    },
+    {
+      target: '.reset-section button',
+      content: 'Click here to reset your saved schools.',
+    },
+  ];
+
+  const tutorialPartTwo = [
+    {
+      target: '.sop-button',
+      content: 'Click here to access the SOP Maker to help with your application essays.',
+    },
+  ];
 
   const handleAddSchool = () => {
     const trimmedSearch = searchTerm.trim();
@@ -115,6 +129,10 @@ function Home() {
       const updated = [...schools, found];
       setSchools(updated);
       localStorage.setItem("savedSchools", JSON.stringify(updated));
+      // If this is the first school being added, trigger the SOP Tool tutorial (Part Two)
+      if (schools.length === 0) {
+        setTutorialPartTwoActive(true);
+      }
     } else {
       alert("School not found in the system.");
     }
@@ -159,6 +177,38 @@ function Home() {
 
   return (
     <div className="home-page">
+      {tutorialActive && (
+        <Joyride
+          steps={tutorialPartOne}
+          run={tutorialActive}
+          continuous={true}
+          showSkipButton={true}
+          callback={(data) => {
+            const { status } = data;
+            if (status === 'finished' || status === 'skipped') {
+              setTutorialActive(false);
+              // If there are any schools added (and thus the SOP tool is visible), trigger Part Two of the tutorial
+              if (schools.length > 0) {
+                setTutorialPartTwoActive(true);
+              }
+            }
+          }}
+        />
+      )}
+      {tutorialPartTwoActive && (
+        <Joyride
+          steps={tutorialPartTwo}
+          run={tutorialPartTwoActive}
+          continuous={true}
+          showSkipButton={true}
+          callback={(data) => {
+            const { status } = data;
+            if (status === 'finished' || status === 'skipped') {
+              setTutorialPartTwoActive(false);
+            }
+          }}
+        />
+      )}
       {/* Top Bar */}
       <header className="top-bar">
         <Link to="/" onClick={() => setSearchFilter("")}>
@@ -175,13 +225,21 @@ function Home() {
       {/* Main Content */}
       <main className="home-content">
         <div className="section-header">
-          <h2>Schools List</h2>
+          <div className="header-left" style={{ display: 'flex', alignItems: 'center' }}>
+            <h2>Schools List</h2>
+            <button
+              onClick={() => setTutorialActive(true)}
+              style={{ marginLeft: '1rem', padding: '0.5rem 1rem' }}
+            >
+              Show Tutorial
+            </button>
+          </div>
           <div className="search-bar">
             <input
-                type="text"
-                placeholder="Search"
-                value={searchFilter}
-                onChange={(e) => setSearchFilter(e.target.value)}
+              type="text"
+              placeholder="Search Added Schools"
+              value={searchFilter}
+              onChange={(e) => setSearchFilter(e.target.value)}
             />
           </div>
         </div>

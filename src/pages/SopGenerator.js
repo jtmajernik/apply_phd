@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import { FaUserCircle } from "react-icons/fa";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
 import {Link, useNavigate} from "react-router-dom";
+import Joyride from "react-joyride"; // Added import for Joyride
 
 // Set the worker for PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
@@ -27,11 +28,33 @@ function SopGenerator() {
 
   const [sopRefinement, setSopRefinement] = useState("");
   const [sopFile, setSopFile] = useState(null);
-  // This state holds the final text generated from OpenAI.
   const [sopOutput, setSopOutput] = useState("");
-  // This state will be updated gradually to create the typewriter effect.
   const [displayedSopOutput, setDisplayedSopOutput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [tutorialActive, setTutorialActive] = useState(false); // New state for tutorialActive
+
+  const tutorialSteps = [ // Defined tutorial steps array
+    {
+      target: '.prof-details-header',
+      content: 'Here you can view and manage professor details.',
+    },
+    {
+      target: '.add-btn',
+      content: 'Click here to add a new professor row.',
+    },
+    {
+      target: '.professor-table',
+      content: 'This table shows the current professors and their associated details.',
+    },
+    {
+      target: '.sop-section',
+      content: 'Use this section to refine your SOP and upload your file.',
+    },
+    {
+      target: '.generate-btn',
+      content: 'Click here to generate SOP recommendations.',
+    },
+  ];
 
   const professorOptions = [
     "Andrew Head",
@@ -40,7 +63,6 @@ function SopGenerator() {
   ];
   const researchInterestOptions = ["HCI"];
 
-  // Drag & drop event handlers for file upload
   const handleDragOver = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -69,7 +91,6 @@ function SopGenerator() {
     }
   };
 
-  // Handlers for professor table changes
   const handleProfessorNameChange = (id, value) => {
     setProfessorsData((prev) =>
       prev.map((prof) => (prof.id === id ? { ...prof, name: value } : prof))
@@ -98,11 +119,10 @@ function SopGenerator() {
     );
   };
 
-  // Updated: Set default name to empty so "Select a Professor" is shown.
   const addProfessorRow = () => {
     const newRow = {
       id: Date.now(),
-      name: "", // Default value is empty, so the select shows "Select a Professor".
+      name: "",
       researchInterests: ["HCI"],
       program: "CIS PhD",
       interviewSent: "Not Sure",
@@ -114,7 +134,6 @@ function SopGenerator() {
     setProfessorsData((prev) => prev.filter((prof) => prof.id !== id));
   };
 
-  // Extract text from the uploaded PDF file.
   const extractPDFText = async (file) => {
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
@@ -129,10 +148,7 @@ function SopGenerator() {
     return fullText;
   };
 
-  // Function to animate text display like a typewriter.
-  // Immediately sets the first character, then starts at index 1.
   const typeWriterEffect = (fullText) => {
-    // Immediately set the first character (if available)
     if (fullText.length > 0) {
       setDisplayedSopOutput(fullText.charAt(0));
     }
@@ -144,7 +160,7 @@ function SopGenerator() {
       } else {
         clearInterval(interval);
       }
-    }, 20); // Adjust the speed (in ms) per character as needed.
+    }, 20);
   };
 
   const handleGenerateSOP = async () => {
@@ -187,7 +203,6 @@ Review the SOP and provide a list of specific changes that I can make to improve
       const data = await response.json();
       const generatedText = data?.choices?.[0]?.message?.content || "";
       setSopOutput(generatedText);
-      // Trigger the typewriter effect with the generated text.
       typeWriterEffect(generatedText);
     } catch (error) {
       console.error("Error generating SOP:", error);
@@ -199,6 +214,21 @@ Review the SOP and provide a list of specific changes that I can make to improve
 
   return (
     <div className="sop-page">
+      {tutorialActive && ( // Added Joyride component
+        <Joyride
+          steps={tutorialSteps}
+          run={tutorialActive}
+          continuous={true}
+          showSkipButton={true}
+          callback={(data) => {
+            const { status } = data;
+            if (status === 'finished' || status === 'skipped') {
+              setTutorialActive(false);
+            }
+          }}
+        />
+      )}
+
       {loading && (
         <div className="spinner-overlay">
           <div className="spinner" />
@@ -214,7 +244,7 @@ Review the SOP and provide a list of specific changes that I can make to improve
             className="top-bar-logo"
             onClick={() => navigate("/")}
           />
-        </div> 
+        </div>
         <Link to="/profile" className="top-bar-profile-link">
           <div className="top-bar-profile">
             <FaUserCircle className="profile-icon" />
@@ -224,7 +254,15 @@ Review the SOP and provide a list of specific changes that I can make to improve
       </header>
 
       <main className="sop-main">
-        <h1>Professor Details</h1>
+        <div className="prof-details-header" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <h1 style={{ margin: 0 }}>Professor Details</h1>
+          <button
+            onClick={() => setTutorialActive(true)}
+            style={{ padding: '0.5rem 1rem' }}
+          >
+            Show Tutorial
+          </button>
+        </div>
         <table className="professor-table">
           <thead>
             <tr>
@@ -332,7 +370,6 @@ Review the SOP and provide a list of specific changes that I can make to improve
               className="sop-textarea"
             ></textarea>
 
-            {/* Fancy Drag & Drop File Upload */}
             <div
               className={`dropzone ${dragOver ? "dragover" : ""}`}
               onDragOver={handleDragOver}
