@@ -1,4 +1,5 @@
 import React from "react";
+import Welcome from "./pages/Welcome";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import your pages
@@ -15,6 +16,8 @@ function App() {
       <Routes>
         {/* The route path "/" points to the Home component */}
         <Route path="/" element={<Home />} />
+
+        <Route path="/welcome" element={<Welcome />} />
 
         {/* Route for user profile */}
         <Route path="/profile" element={<UserProfile />} />

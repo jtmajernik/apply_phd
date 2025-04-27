@@ -3,7 +3,7 @@ import "./Home.css";
 import logo from "../assets/logo.png";
 import pennLogo from "../assets/penn_logo.png"; // Add these images to your assets folder
 import { FaUserCircle, FaSearch, FaTrashAlt, FaPlus } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Joyride from "react-joyride";
 
 const schoolDB = [
@@ -83,6 +83,14 @@ function Home() {
   const [searchFilter, setSearchFilter] = useState("");
   const [tutorialActive, setTutorialActive] = useState(false);
   const [tutorialPartTwoActive, setTutorialPartTwoActive] = useState(false);
+
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.state?.showTutorial) {
+      setTutorialActive(true);
+    }
+  }, [location]);
 
   const tutorialPartOne = [
     {
