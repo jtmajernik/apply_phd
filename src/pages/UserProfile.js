@@ -272,6 +272,7 @@ function UserProfile() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <h2 style={{ margin: 0 }}>User Profile</h2>
             <button
+            className="tutorial-button"
               onClick={() => setTutorialActive(true)}
               style={{ padding: '0.5rem 1rem' }}
             >

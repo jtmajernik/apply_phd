@@ -293,3 +293,18 @@
   padding: 0;
   font-size: 0.9rem;
 }
+
+/* Tutorial Button */
+.tutorial-button {
+  margin-left: 1rem;           /* keep your existing spacing */
+  padding: 0.5rem 1rem;
+  background-color: #426E95;   /* same as .add-school button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tutorial-button:hover {
+  background-color: #005fa3;   /* same hover as .add-school button */
+}

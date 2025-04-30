@@ -257,6 +257,7 @@ Review the SOP and provide a list of specific changes that I can make to improve
         <div className="prof-details-header" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <h1 style={{ margin: 0 }}>Professor Details</h1>
           <button
+          className="tutorial-button"
             onClick={() => setTutorialActive(true)}
             style={{ padding: '0.5rem 1rem' }}
           >

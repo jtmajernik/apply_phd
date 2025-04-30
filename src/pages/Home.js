@@ -236,6 +236,7 @@ function Home() {
           <div className="header-left" style={{ display: 'flex', alignItems: 'center' }}>
             <h2>Schools List</h2>
             <button
+            className="tutorial-button"
               onClick={() => setTutorialActive(true)}
               style={{ marginLeft: '1rem', padding: '0.5rem 1rem' }}
             >
@@ -262,7 +263,7 @@ function Home() {
                   <img src={school.logo} alt={`${school.name} logo`} className="school-logo"/>
                   <div className="school-info">
                     <h3>{school.name}</h3>
-                    <p><strong>Letters of Recommendation</strong></p>
+                    <p><strong>Send SoP</strong></p>
                     {school.lor.map((ref, i) => (
                         <label key={i} className="lor-entry">
                           <input
@@ -270,7 +271,7 @@ function Home() {
                               checked={ref.sent}
                               onChange={() => handleToggleLorStatus(school.name, i)}
                           />
-                          {ref.name} — {ref.sent ? "sent ✅" : "unsent ⬛"}
+                          {ref.name} — {ref.sent ? "Submit Application ✅" : "Submit Application ⬛"}
                         </label>
                     ))}
                   </div>
