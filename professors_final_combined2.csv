@@ -1,0 +1,585 @@
+professor_name,personal_website,research_interests,interview,program,school
+Daniela Rus,https://danielarus.csail.mit.edu,Robotics and autonomous systems for the physical world,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Armando Solar-Lezama,https://people.csail.mit.edu/asolar,Program synthesis and AI-driven programming systems,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Regina Barzilay,https://www.regina.csail.mit.edu,NLP and machine learning for healthcare and drug discovery,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Erik Demaine,https://erikdemaine.org,Algorithms and computational geometry of folding problems,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Leslie Pack Kaelbling,https://people.csail.mit.edu/lpk,Planning and decision making for robotic intelligence,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Jacob Andreas,https://www.mit.edu/~jda,Language grounding and neurosymbolic learning,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Stefanie Jegelka,https://people.csail.mit.edu/stefje,Machine-learning theory and structured optimization,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Pulkit Agrawal,https://people.csail.mit.edu/pulkitag,Learning-enabled robotics and embodied intelligence,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Phillip Isola,https://web.mit.edu/phillipi,Vision and generative models for visual intelligence,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Adam Belay,https://www.abelay.me,Operating systems and datacenter-scale networking,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Tim Kraska,https://people.csail.mit.edu/kraska,Learned data systems and ML-accelerated databases,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Bonnie Berger,https://people.csail.mit.edu/bab,Algorithms for genomics and computational biology,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Silvio Micali,http://people.csail.mit.edu/silvio,Cryptographic protocols and blockchain theory,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Devavrat Shah,https://devavrat.mit.edu,Network algorithms and large-scale statistical inference,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Muriel Médard,https://ncrcg.mit.edu/muriel-medard,Network coding and information theory for communications,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Tamara Broderick,https://tamarabroderick.com,Bayesian ML and scalable uncertainty quantification,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Neil Gershenfeld,https://ng.cba.mit.edu,Digital fabrication and physical-digital convergence,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Julie A. Shah,https://people.csail.mit.edu/julie_a_shah/Welcome.html,Human-robot collaboration and interactive AI,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Nir Shavit,https://people.csail.mit.edu/shanir,Parallel algorithms and concurrent data structures,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Michael Carbin,https://people.csail.mit.edu/mcarbin,Reliable and approximate computing systems,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Saman Amarasinghe,https://people.csail.mit.edu/saman,Compilers and high-performance domain-specific languages,Not Sure,CIS PhD,Massachusetts Institute of Technology
+William T. Freeman,https://billf.mit.edu,Computer vision and computational photography,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Tommi Jaakkola,https://people.csail.mit.edu/tommi,Machine learning and probabilistic modeling,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Anant Agarwal,https://people.csail.mit.edu/agarwal,Computer architecture and scalable parallel systems,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Mohammad Alizadeh,https://people.csail.mit.edu/alizadeh,Data-center networks and congestion control,Not Sure,CIS PhD,Massachusetts Institute of Technology
+Sanjeev Arora,https://www.cs.princeton.edu/~arora/,"Algorithms, complexity theory, machine learning foundations",Not Sure,CIS PhD,Princeton University
+Andrew W. Appel,https://www.cs.princeton.edu/~appel/,"Programming languages, compilers, verification, security",Not Sure,CIS PhD,Princeton University
+Jennifer Rexford,https://www.cs.princeton.edu/~jrex/,"Computer networking, routing protocols, network management",Not Sure,CIS PhD,Princeton University
+Margaret Martonosi,https://www.cs.princeton.edu/~mrm/,"Computer architecture, power-efficient and parallel systems",Not Sure,CIS PhD,Princeton University
+Kai Li,https://www.cs.princeton.edu/~li/,"Distributed systems, storage, memory and data processing",Not Sure,CIS PhD,Princeton University
+Mona Singh,https://www.cs.princeton.edu/~mona/,"Computational biology, genomics, protein networks",Not Sure,CIS PhD,Princeton University
+Olga Russakovsky,http://olga.ac/,"Computer vision, image recognition, AI fairness",Not Sure,CIS PhD,Princeton University
+Elad Hazan,https://www.cs.princeton.edu/~ehazan/,Optimization algorithms for machine learning and AI,Not Sure,CIS PhD,Princeton University
+Adam Finkelstein,https://www.cs.princeton.edu/~af/,"Computer graphics, computational imaging, HCI",Not Sure,CIS PhD,Princeton University
+Danqi Chen,https://www.cs.princeton.edu/~danqic/,Neural natural language processing and understanding,Not Sure,CIS PhD,Princeton University
+Jia Deng,https://www.cs.princeton.edu/~jiadeng/,Vision and machine learning for scene understanding,Not Sure,CIS PhD,Princeton University
+Benjamin Eysenbach,https://ben-eysenbach.github.io/,Reinforcement learning theory and scalable agents,Not Sure,CIS PhD,Princeton University
+Aarti Gupta,https://www.cs.princeton.edu/~aarti/,"Formal verification, model checking, software correctness",Not Sure,CIS PhD,Princeton University
+Amit Levy,https://www.amitlevy.com/,"Secure operating and distributed systems, privacy",Not Sure,CIS PhD,Princeton University
+Karthik Narasimhan,https://www.cs.princeton.edu/~karthikn/,"Language-grounded agents, decision-making, NLP",Not Sure,CIS PhD,Princeton University
+Peter Henderson,https://www.peterhenderson.co/,"AI and law, safe and responsible machine learning",Not Sure,CIS PhD,Princeton University
+Wyatt Lloyd,https://www.cs.princeton.edu/~wlloyd/,Large-scale distributed systems and consistency,Not Sure,CIS PhD,Princeton University
+Prateek Mittal,https://www.princeton.edu/~pmittal/,"Privacy, security, adversarial ML, anonymity",Not Sure,CIS PhD,Princeton University
+Tom Griffiths,https://cocosci.princeton.edu/tom/,Computational models of human cognition and AI,Not Sure,CIS PhD,Princeton University
+Arvind Narayanan,https://www.cs.princeton.edu/~arvindn/,"Security, privacy, social impact of technology",Not Sure,CIS PhD,Princeton University
+Mark Braverman,https://mbraverm.princeton.edu/,"Complexity theory, information theory, algorithms",Not Sure,CIS PhD,Princeton University
+Ran Raz,https://engineering.princeton.edu/faculty/ran-raz,"Circuit complexity, interactive proofs, theory",Not Sure,CIS PhD,Princeton University
+Gillat Kol,https://engineering.princeton.edu/faculty/gillat-kol,"Communication complexity, theoretical computer science",Not Sure,CIS PhD,Princeton University
+Zhuang Liu,https://liuzhuang13.github.io/,"Deep learning, computer vision, model efficiency",Not Sure,CIS PhD,Princeton University
+Alex Lombardi,https://sites.google.com/view/alex-lombardi/home,"Cryptography theory, quantum and classical",Not Sure,CIS PhD,Princeton University
+Lydia T. Liu,https://www.lydiatliu.com/,"Algorithmic fairness, societal impacts of ML",Not Sure,CIS PhD,Princeton University
+Tri Dao,https://tridao.me/,"Efficient sequence models, transformer optimization",Not Sure,CIS PhD,Princeton University
+Felix Heide,https://www.cs.princeton.edu/~fheide/,"Computational imaging, computer vision systems",Not Sure,CIS PhD,Princeton University
+Parastoo Abtahi,https://parastooabtahi.com/,"AR/VR, spatial computing, human-computer interaction",Not Sure,CIS PhD,Princeton University
+Ryan P. Adams,https://www.cs.princeton.edu/~rpa/,"Probabilistic machine learning, Bayesian inference",Not Sure,CIS PhD,Princeton University
+Sara Achour,https://www.cs.stanford.edu/people/sachour,Computer architecture and programming languages,Not Sure,CIS PhD,Stanford University
+Maneesh Agrawala,https://www.cs.stanford.edu/people/agrawala,Computer graphics and human-computer interaction,Not Sure,CIS PhD,Stanford University
+Alex Aiken,https://www.cs.stanford.edu/people/aiken,Programming languages and software engineering,Not Sure,CIS PhD,Stanford University
+Nima Anari,https://www.cs.stanford.edu/people/anari,Algorithms and theoretical computer science,Not Sure,CIS PhD,Stanford University
+Clark Barrett,https://www.cs.stanford.edu/people/barrett,Formal methods and automated reasoning,Not Sure,CIS PhD,Stanford University
+Michael Bernstein,https://www.cs.stanford.edu/people/michaelbernstein,Human-computer interaction and social computing,Not Sure,CIS PhD,Stanford University
+Jeannette Bohg,https://www.cs.stanford.edu/people/bohg,Robotics and computer vision,Not Sure,CIS PhD,Stanford University
+Dan Boneh,https://www.cs.stanford.edu/people/dabo,Cryptography and computer security,Not Sure,CIS PhD,Stanford University
+Emma Brunskill,https://www.cs.stanford.edu/people/ebrun,Machine learning and reinforcement learning,Not Sure,CIS PhD,Stanford University
+Moses Charikar,https://www.cs.stanford.edu/people/charikar,Algorithms and data structures,Not Sure,CIS PhD,Stanford University
+Dawson Engler,https://www.cs.stanford.edu/people/engler,Systems and software analysis,Not Sure,CIS PhD,Stanford University
+Stefano Ermon,https://www.cs.stanford.edu/people/ermon,Machine learning and artificial intelligence,Not Sure,CIS PhD,Stanford University
+Kayvon Fatahalian,https://www.cs.stanford.edu/people/kvf,Computer graphics and systems,Not Sure,CIS PhD,Stanford University
+Ron Fedkiw,https://www.cs.stanford.edu/people/fedkiw,Computer graphics and physics-based simulation,Not Sure,CIS PhD,Stanford University
+Chelsea Finn,https://www.cs.stanford.edu/people/chelseaf,Robotics and machine learning,Not Sure,CIS PhD,Stanford University
+Emily Fox,https://www.cs.stanford.edu/people/ebfox,Machine learning and statistics,Not Sure,CIS PhD,Stanford University
+Michael Genesereth,https://www.cs.stanford.edu/people/genesereth,Artificial intelligence and logic programming,Not Sure,CIS PhD,Stanford University
+Noah Goodman,https://www.cs.stanford.edu/people/ngoodman,Cognitive science and probabilistic programming,Not Sure,CIS PhD,Stanford University
+Leonidas Guibas,https://www.cs.stanford.edu/people/guibas,Computer graphics and geometric computing,Not Sure,CIS PhD,Stanford University
+Tatsunori Hashimoto,https://www.cs.stanford.edu/people/tatsu,Machine learning and natural language processing,Not Sure,CIS PhD,Stanford University
+John Hennessy,https://www.cs.stanford.edu/people/hennessy,Computer architecture and systems,Not Sure,CIS PhD,Stanford University
+Mark Horowitz,https://www.cs.stanford.edu/people/horowitz,Computer architecture and VLSI design,Not Sure,CIS PhD,Stanford University
+Dan Jurafsky,https://www.cs.stanford.edu/people/jurafsky,Natural language processing and linguistics,Not Sure,CIS PhD,Stanford University
+Oussama Khatib,https://www.cs.stanford.edu/people/khatib,Robotics and human-robot interaction,Not Sure,CIS PhD,Stanford University
+Monica Lam,https://www.cs.stanford.edu/people/lam,Programming languages and systems,Not Sure,CIS PhD,Stanford University
+Jure Leskovec,https://www.cs.stanford.edu/people/jure,Data mining and social network analysis,Not Sure,CIS PhD,Stanford University
+Fei-Fei Li,https://www.cs.stanford.edu/people/feifeili,Computer vision and artificial intelligence,Not Sure,CIS PhD,Stanford University
+Christopher Manning,https://www.cs.stanford.edu/people/manning,Natural language processing and deep learning,Not Sure,CIS PhD,Stanford University
+David Mazieres,https://www.cs.stanford.edu/people/mazieres,Computer security and distributed systems,Not Sure,CIS PhD,Stanford University
+John Ousterhout,https://www.cs.stanford.edu/people/johnousterhout,Distributed systems and programming languages,Not Sure,CIS PhD,Stanford University
+Christine Alvarado,https://sites.google.com/ucsd.edu/alvarado/home,CS education and broadening participation,Not Sure,CIS PhD,University of California San Diego
+Taylor Berg-Kirkpatrick,https://cseweb.ucsd.edu/~tberg/,NLP unsupervised machine learning historical text,Not Sure,CIS PhD,University of California San Diego
+Kamalika Chaudhuri,https://cseweb.ucsd.edu/~kamalika/,Privacy preserving machine learning theory,Not Sure,CIS PhD,University of California San Diego
+Ranjit Jhala,https://cseweb.ucsd.edu/~jhala/,Program verification and type systems,Not Sure,CIS PhD,University of California San Diego
+Stefan Savage,https://cseweb.ucsd.edu/~savage/,Network security and cybercrime economics,Not Sure,CIS PhD,University of California San Diego
+Tajana Šimunić Rosing,https://cseweb.ucsd.edu/~tajana/,Energy efficient embedded and IoT systems,Not Sure,CIS PhD,University of California San Diego
+Rajesh K. Gupta,https://cseweb.ucsd.edu/~rgupta/,Cyber physical embedded system design,Not Sure,CIS PhD,University of California San Diego
+Ryan Kastner,https://kastner.ucsd.edu/,Hardware security and reconfigurable computing,Not Sure,CIS PhD,University of California San Diego
+Vineet Bafna,https://cseweb.ucsd.edu/~vbafna/,Computational genomics algorithms,Not Sure,CIS PhD,University of California San Diego
+Julian McAuley,https://julianmcauley.info/,Recommender systems and social network ML,Not Sure,CIS PhD,University of California San Diego
+Andrew B. Kahng,https://vlsicad.ucsd.edu/~abk/,VLSI CAD and IC design optimization,Not Sure,CIS PhD,University of California San Diego
+Yoav Freund,https://cseweb.ucsd.edu/~yfreund/,Computational learning theory and boosting,Not Sure,CIS PhD,University of California San Diego
+Daniel Kane,https://cseweb.ucsd.edu/~dakane/,Theoretical algorithms and additive combinatorics,Not Sure,CIS PhD,University of California San Diego
+Laurel Riek,https://cseweb.ucsd.edu/~lriek/,Healthcare robotics and human robot interaction,Not Sure,CIS PhD,University of California San Diego
+Nadia Polikarpova,https://cseweb.ucsd.edu/~npolikarpova/,Program synthesis and software verification,Not Sure,CIS PhD,University of California San Diego
+Hadi Esmaeilzadeh,https://cseweb.ucsd.edu/~hadi/,Approximate and heterogeneous architectures,Not Sure,CIS PhD,University of California San Diego
+Deian Stefan,https://cseweb.ucsd.edu/~dstefan/,Language based and systems security,Not Sure,CIS PhD,University of California San Diego
+Alex C. Snoeren,https://cseweb.ucsd.edu/~snoeren/,Networked systems and Internet measurement,Not Sure,CIS PhD,University of California San Diego
+Dean M. Tullsen,https://cseweb.ucsd.edu/~tullsen/,Processor architecture and multithreading,Not Sure,CIS PhD,University of California San Diego
+Geoffrey M. Voelker,https://cseweb.ucsd.edu/~voelker/,Distributed and networked systems,Not Sure,CIS PhD,University of California San Diego
+Aaron Schulman,https://cseweb.ucsd.edu/~schulman/,Wireless and Internet reliability security,Not Sure,CIS PhD,University of California San Diego
+Yiying Zhang,https://cseweb.ucsd.edu/~yiying/,Cloud and ML centric operating systems,Not Sure,CIS PhD,University of California San Diego
+Jishen Zhao,https://cseweb.ucsd.edu/~jzhao/,Memory systems and ML architecture codesign,Not Sure,CIS PhD,University of California San Diego
+Alon Orlitsky,https://cseweb.ucsd.edu/~alon/,Information theory and statistical inference,Not Sure,CIS PhD,University of California San Diego
+Barna Saha,https://cseweb.ucsd.edu/~barna/,Sublinear algorithms and data quality guarantees,Not Sure,CIS PhD,University of California San Diego
+Ravi Ramamoorthi,https://cseweb.ucsd.edu/~ravir/,Realistic rendering and computational imaging,Not Sure,CIS PhD,University of California San Diego
+Hao Su,https://cseweb.ucsd.edu/~haosu/,3D vision robotics and deep learning,Not Sure,CIS PhD,University of California San Diego
+George Porter,https://cseweb.ucsd.edu/~gmporter/,Datacenter networking and cloud infrastructure,Not Sure,CIS PhD,University of California San Diego
+Shachar Lovett,https://cseweb.ucsd.edu/~slovett/,Complexity theory and pseudorandomness,Not Sure,CIS PhD,University of California San Diego
+Jingbo Shang,https://shangjingbo1226.github.io/,Knowledge extraction and weak supervision in NLP,Not Sure,CIS PhD,University of California San Diego
+Shivani Agarwal,https://shivaniagarwal.net,"Machine learning theory, ranking, structured prediction",Not Sure,CIS PhD,University of Pennsylvania
+Rajeev Alur,https://www.cis.upenn.edu/~alur/,"Formal verification, cyber-physical systems, program synthesis",Not Sure,CIS PhD,University of Pennsylvania
+Sebastian Angel,https://www.cis.upenn.edu/~sga001/,Systems security and privacy-preserving networking,Not Sure,CIS PhD,University of Pennsylvania
+Osbert Bastani,https://obastani.github.io/,"Reliable ML, probabilistic programming, program synthesis",Not Sure,CIS PhD,University of Pennsylvania
+Chris Callison-Burch,https://www.cis.upenn.edu/~ccb/,Natural language processing and machine translation,Not Sure,CIS PhD,University of Pennsylvania
+Pratik Chaudhari,https://pratikac.github.io/,"Deep learning theory, non-convex optimization, robustness",Not Sure,CIS PhD,University of Pennsylvania
+Konstantinos Daniilidis,https://www.cis.upenn.edu/~kostas/,Computer vision and robotic perception,Not Sure,CIS PhD,University of Pennsylvania
+Susan B. Davidson,https://www.cis.upenn.edu/~susan/,"Databases, data integration and provenance",Not Sure,CIS PhD,University of Pennsylvania
+Anindya De,https://www.seas.upenn.edu/~anindyad/,"Complexity theory, Boolean functions, learning theory",Not Sure,CIS PhD,University of Pennsylvania
+Andre DeHon,https://www.seas.upenn.edu/~andre/,Reconfigurable computing and secure hardware architectures,Not Sure,CIS PhD,University of Pennsylvania
+Joseph Devietti,https://www.cis.upenn.edu/~devietti/,Parallel programming and memory consistency models,Not Sure,CIS PhD,University of Pennsylvania
+Eric Eaton,https://www.seas.upenn.edu/~eeaton/,Lifelong machine learning and robotics applications,Not Sure,CIS PhD,University of Pennsylvania
+Nadia Figueroa,https://nbfigueroa.github.io/,Human-robot collaboration and adaptive motion planning,Not Sure,CIS PhD,University of Pennsylvania
+Jacob Gardner,https://jacobrgardner.github.io/,Probabilistic ML and Bayesian optimization methods,Not Sure,CIS PhD,University of Pennsylvania
+Surbhi Goel,https://www.surbhigoel.com/,Theoretical foundations of modern machine learning,Not Sure,CIS PhD,University of Pennsylvania
+Andreas Haeberlen,https://haeberlen.cis.upenn.edu/,"Distributed systems, cloud privacy, differential privacy",Not Sure,CIS PhD,University of Pennsylvania
+Hamed Hassani,https://www.seas.upenn.edu/~hassani/,"Information theory, learning algorithms, network optimization",Not Sure,CIS PhD,University of Pennsylvania
+Andrew Head,https://andrewhead.info/,Human-AI interaction for code understanding and HCI,Not Sure,CIS PhD,University of Pennsylvania
+M. Ani Hsieh,https://mhsieh.seas.upenn.edu/,"Swarm and underwater robotics, environmental monitoring",Not Sure,CIS PhD,University of Pennsylvania
+Zachary Ives,https://www.cis.upenn.edu/~zives/,"Data integration, provenance, scalable data management",Not Sure,CIS PhD,University of Pennsylvania
+Dinesh Jayaraman,https://www.seas.upenn.edu/~dineshj/,"Robot perception and action, vision-based learning",Not Sure,CIS PhD,University of Pennsylvania
+Michael Kearns,https://www.cis.upenn.edu/~mkearns/,"Algorithmic game theory, machine learning, fairness",Not Sure,CIS PhD,University of Pennsylvania
+Sanjeev Khanna,https://www.cis.upenn.edu/~sanjeev/,Approximation algorithms and graph computation,Not Sure,CIS PhD,University of Pennsylvania
+Lingjie Liu,https://lingjie0206.github.io/,"Neural rendering, computer graphics, 4D reconstruction",Not Sure,CIS PhD,University of Pennsylvania
+Boon Thau Loo,https://boonloo.cis.upenn.edu/,Distributed data systems and declarative networking,Not Sure,CIS PhD,University of Pennsylvania
+Nikolai Matni,https://nikolaimatni.github.io/,Learning-based control and cyber-physical systems,Not Sure,CIS PhD,University of Pennsylvania
+Mayur Naik,https://www.cis.upenn.edu/~mhnaik/,"Program analysis, software reliability and synthesis",Not Sure,CIS PhD,University of Pennsylvania
+Linh Thi Xuan Phan,https://www.cis.upenn.edu/~linhphan/,Real-time and cyber-physical systems security,Not Sure,CIS PhD,University of Pennsylvania
+Benjamin C. Pierce,https://www.cis.upenn.edu/~bcpierce/,"Programming languages, type systems, formal methods",Not Sure,CIS PhD,University of Pennsylvania
+Stephanie Weirich,https://www.cis.upenn.edu/~sweirich/,"Functional programming, dependent types, type safety",Not Sure,CIS PhD,University of Pennsylvania
+Jernej Barbic,https://www.jernejbarbic.com,"Graphics, animation, real-time physics simulation",Not Sure,CIS PhD,University of Southern California
+Bistra Dilkina,https://www.cais.usc.edu,Combinatorial optimization for sustainability and AI,Not Sure,CIS PhD,University of Southern California
+Yan Liu,https://www-bcf.usc.edu/~liu32/,Machine learning for time series and health data,Not Sure,CIS PhD,University of Southern California
+Shanghua Teng,http://www-rcf.usc.edu/~teng/,"Algorithms, smoothed analysis, spectral graph theory",Not Sure,CIS PhD,University of Southern California
+David Kempe,http://www-rcf.usc.edu/~dkempe/,"Network algorithms, social networks, influence spread",Not Sure,CIS PhD,University of Southern California
+Nenad Medvidovic,https://medvidovic.usc.edu,"Software architecture, distributed and cyber-physical systems",Not Sure,CIS PhD,University of Southern California
+Gaurav Sukhatme,http://robotics.usc.edu/~sukhatme/,"Robotic sensing, autonomy, and marine robotics",Not Sure,CIS PhD,University of Southern California
+Cyrus Shahabi,http://infolab.usc.edu/,"Spatial databases, geospatial AI, big data analytics",Not Sure,CIS PhD,University of Southern California
+Chao Wang,https://chaowang.info/,"Program verification, software security, formal methods",Not Sure,CIS PhD,University of Southern California
+Haipeng Luo,https://haipengl.github.io/,"Online learning theory, bandits, theoretical machine learning",Not Sure,CIS PhD,University of Southern California
+Robin Jia,https://robinjia.com/,Robust natural language processing and question answering,Not Sure,CIS PhD,University of Southern California
+Stefanos Nikolaidis,https://www.stefanosn.io/,Human-robot interaction and shared autonomy,Not Sure,CIS PhD,University of Southern California
+Maja Mataric,http://gait.usc.edu/~mataric/,Socially assistive robotics and human-robot interaction,Not Sure,CIS PhD,University of Southern California
+William G.J. Halfond,https://williamhalfond.com/,"Software testing, web performance, energy efficiency",Not Sure,CIS PhD,University of Southern California
+Bhaskar Krishnamachari,https://ee.usc.edu/~bkrishna/,"Wireless sensor networks, IoT, edge computing",Not Sure,CIS PhD,University of Southern California
+Carl Kesselman,http://www.isi.edu/~kesselma/,"Grid computing, cyberinfrastructure, scientific workflows",Not Sure,CIS PhD,University of Southern California
+Ramesh Govindan,https://www.isi.edu/~govindan/,"Internet routing, wireless networking, IoT systems",Not Sure,CIS PhD,University of Southern California
+Laurent Itti,https://ilab.usc.edu/,"Computational neuroscience, visual attention, computer vision",Not Sure,CIS PhD,University of Southern California
+Swabha Swayamdipta,https://www.swabhas.com/,"NLP, dataset quality, model robustness and interpretability",Not Sure,CIS PhD,University of Southern California
+Meisam Razaviyayn,https://sites.usc.edu/razaviyayn/,Optimization algorithms for machine learning,Not Sure,CIS PhD,University of Southern California
+Mahdi Soltanolkotabi,https://sml.usc.edu/soltanolkotabi/,Nonconvex optimization and machine learning theory,Not Sure,CIS PhD,University of Southern California
+Konstantinos Psounis,https://ceng.usc.edu/~kpsounis/,"Network protocols, mobile computing, social networks",Not Sure,CIS PhD,University of Southern California
+Cauligi S. Raghavendra,https://www.isi.edu/~raghu/,"Wireless networks, distributed algorithms, VLSI systems",Not Sure,CIS PhD,University of Southern California
+Mukund Raghothaman,https://mukundr.github.io/,"Programming languages, program analysis, synthesis",Not Sure,CIS PhD,University of Southern California
+Benjamin W. Reichardt,https://sites.usc.edu/quantum/,Quantum computing algorithms and error correction,Not Sure,CIS PhD,University of Southern California
+Maryam Shanechi,https://shanechilab.com/,Brain-machine interfaces and neural signal decoding,Not Sure,CIS PhD,University of Southern California
+Dani Yogatama,https://danielyogatama.com/,Representation learning and probabilistic NLP,Not Sure,CIS PhD,University of Southern California
+Jesse Thomason,https://jessethomason.com/,Language-guided robot learning and grounded NLP,Not Sure,CIS PhD,University of Southern California
+Oded Stein,https://www.odedstein.com/,"Geometry processing, graphics, numerical PDE solvers",Not Sure,CIS PhD,University of Southern California
+Yue Wang,https://yuewang.xyz/,3D computer vision for autonomous driving and robotics,Not Sure,CIS PhD,University of Southern California
+Scott Aaronson,https://www.cs.utexas.edu/people/faculty-researchers/scott-aaronson,Quantum computing,Not Sure,CIS PhD,The University of Texas at Austin
+Aditya Akella,https://www.cs.utexas.edu/people/faculty-researchers/aditya-akella,Cloud and Internet networking systems,Not Sure,CIS PhD,The University of Texas at Austin
+Venkat Arun,https://www.cs.utexas.edu/people/faculty-researchers/venkat-arun,Systems and formal methods,Not Sure,CIS PhD,The University of Texas at Austin
+Joydeep Biswas,https://www.cs.utexas.edu/people/faculty-researchers/joydeep-biswas,Autonomous robotics,Not Sure,CIS PhD,The University of Texas at Austin
+James Bornholt,https://www.cs.utexas.edu/people/faculty-researchers/james-bornholt,Formal verification,Not Sure,CIS PhD,The University of Texas at Austin
+Swarat Chaudhuri,https://www.cs.utexas.edu/people/faculty-researchers/swarat-chaudhuri,AI & programming languages,Not Sure,CIS PhD,The University of Texas at Austin
+Shuchi Chawla,https://www.cs.utexas.edu/people/faculty-researchers/shuchi-chawla,Algorithms and theoretical CS,Not Sure,CIS PhD,The University of Texas at Austin
+Vijay Chidambaram,https://www.cs.utexas.edu/people/faculty-researchers/vijay-chidambaram,Storage systems,Not Sure,CIS PhD,The University of Texas at Austin
+Isil Dillig,https://www.cs.utexas.edu/people/faculty-researchers/isil-dillig,Program analysis,Not Sure,CIS PhD,The University of Texas at Austin
+Alexandros G. Dimakis,https://www.cs.utexas.edu/people/faculty-researchers/alexandros-g-dimakis,Machine learning,Not Sure,CIS PhD,The University of Texas at Austin
+Greg Durrett,https://www.cs.utexas.edu/people/faculty-researchers/greg-durrett,Natural language processing & ML,Not Sure,CIS PhD,The University of Texas at Austin
+Katrin Erk,https://www.cs.utexas.edu/people/faculty-researchers/katrin-erk,Computational semantics,Not Sure,CIS PhD,The University of Texas at Austin
+Don Fussell,https://www.cs.utexas.edu/people/faculty-researchers/don-fussell,Graphics architecture,Not Sure,CIS PhD,The University of Texas at Austin
+Anna Gal,https://www.cs.utexas.edu/people/faculty-researchers/anna-gal,Computational complexity,Not Sure,CIS PhD,The University of Texas at Austin
+Kristen Grauman,https://www.cs.utexas.edu/people/faculty-researchers/kristen-grauman,Computer vision,Not Sure,CIS PhD,The University of Texas at Austin
+Calvin Lin,https://www.cs.utexas.edu/people/faculty-researchers/calvin-lin,Parallel computing,Not Sure,CIS PhD,The University of Texas at Austin
+Qiang Liu,https://www.cs.utexas.edu/people/faculty-researchers/qiang-liu,Bayesian methods,Not Sure,CIS PhD,The University of Texas at Austin
+Roberto Martin-Martin,https://www.cs.utexas.edu/people/faculty-researchers/roberto-martin-martin,Robot manipulation and navigation,Not Sure,CIS PhD,The University of Texas at Austin
+Ken McMillan,https://www.cs.utexas.edu/people/faculty-researchers/ken-mcmillan,Formal verification,Not Sure,CIS PhD,The University of Texas at Austin
+Risto Miikkulainen,https://www.cs.utexas.edu/people/faculty-researchers/raymond-mooney,Neuroevolution,Not Sure,CIS PhD,The University of Texas at Austin
+Raymond Mooney,https://www.cs.utexas.edu/people/faculty-researchers/dana-moshkovitz,Machine learning for NLP,Not Sure,CIS PhD,The University of Texas at Austin
+Dana Moshkovitz,https://www.cs.utexas.edu/people/faculty-researchers/shravan-narayan,Probabilistic proofs,Not Sure,CIS PhD,The University of Texas at Austin
+Shravan Narayan,https://www.cs.utexas.edu/people/faculty-researchers/hovav-shacham,Secure programming languages,Not Sure,CIS PhD,The University of Texas at Austin
+Christopher Rossbach,https://www.cs.utexas.edu/people/faculty-researchers/peter-stone,Systems,Not Sure,CIS PhD,The University of Texas at Austin
+Hovav Shacham,https://www.cs.utexas.edu/people/faculty-researchers/brent-waters,Applied cryptography,Not Sure,CIS PhD,The University of Texas at Austin
+Peter Stone,https://www.cs.utexas.edu/people/faculty-researchers/david-wu,Multiagent systems,Not Sure,CIS PhD,The University of Texas at Austin
+Brent Waters,https://www.cs.utexas.edu/people/faculty-researchers/yuke-zhu,Cryptography,Not Sure,CIS PhD,The University of Texas at Austin
+Tim Althoff,https://homes.cs.washington.edu/~althoff/,"Data science, social computing, health analytics",Not Sure,CIS PhD,University of Washington
+Thomas E. Anderson,https://homes.cs.washington.edu/~tom/,"Distributed systems, networking, operating systems",Not Sure,CIS PhD,University of Washington
+Magdalena Balazinska,https://homes.cs.washington.edu/~magda/,"Databases, cloud data systems, big-data analytics",Not Sure,CIS PhD,University of Washington
+Leilani Battle,https://homes.cs.washington.edu/~leibatt/,Interactive visualization and scalable data exploration,Not Sure,CIS PhD,University of Washington
+Luis Ceze,https://homes.cs.washington.edu/~luisceze/,"Computer architecture, ML systems, DNA data storage",Not Sure,CIS PhD,University of Washington
+Yejin Choi,https://homes.cs.washington.edu/~yejin/,Commonsense-rich NLP and large language models,Not Sure,CIS PhD,University of Washington
+Dieter Fox,https://homes.cs.washington.edu/~fox/,"Robotics perception, SLAM, manipulation AI",Not Sure,CIS PhD,University of Washington
+Shyam Gollakota,https://homes.cs.washington.edu/~gshyam/,"Wireless sensing, IoT health, mobile systems",Not Sure,CIS PhD,University of Washington
+Jeff Heer,https://homes.cs.washington.edu/~jheer/,Data visualization and human-computer interaction,Not Sure,CIS PhD,University of Washington
+Kevin Jamieson,https://homes.cs.washington.edu/~jamieson/,Active learning and adaptive experimentation,Not Sure,CIS PhD,University of Washington
+Tadayoshi Kohno,https://homes.cs.washington.edu/~yoshi/,"Security, privacy, tech & society intersections",Not Sure,CIS PhD,University of Washington
+Arvind Krishnamurthy,https://homes.cs.washington.edu/~arvind/,Networked and cloud computing systems,Not Sure,CIS PhD,University of Washington
+Dan Grossman,https://homes.cs.washington.edu/~djg/,"Programming languages, concurrency, PL education",Not Sure,CIS PhD,University of Washington
+Shwetak Patel,https://homes.cs.washington.edu/~shwetak/,Ubiquitous sensing for health and sustainability,Not Sure,CIS PhD,University of Washington
+Noah A. Smith,https://homes.cs.washington.edu/~nasmith/,Machine learning for natural language processing,Not Sure,CIS PhD,University of Washington
+Luke Zettlemoyer,https://homes.cs.washington.edu/~lsz/,Language understanding and LLM training methods,Not Sure,CIS PhD,University of Washington
+Simon Shaolei Du,https://simonshaoleidu.com/,Theory of deep learning and representation learning,Not Sure,CIS PhD,University of Washington
+Amy X. Zhang,https://homes.cs.washington.edu/~axz/,Social computing and online discourse tooling,Not Sure,CIS PhD,University of Washington
+Ranjay Krishna,https://www.ranjaykrishna.com/,"Vision-language models, multimodal robotics",Not Sure,CIS PhD,University of Washington
+Zachary Tatlock,https://homes.cs.washington.edu/~ztatlock/,"Formal methods, compilers, computational fabrication",Not Sure,CIS PhD,University of Washington
+Baris Kasikci,https://homes.cs.washington.edu/~baris/,"Efficient, trustworthy computer systems & debugging",Not Sure,CIS PhD,University of Washington
+Adriana Schulz,https://homes.cs.washington.edu/~adriana/,Computational design and digital fabrication,Not Sure,CIS PhD,University of Washington
+Franziska Roesner,https://homes.cs.washington.edu/~franzi/,"Security & privacy for web, XR, and user safety",Not Sure,CIS PhD,University of Washington
+Simon Peter,https://homes.cs.washington.edu/~simpeter/,Datacenter OS and high-performance networking,Not Sure,CIS PhD,University of Washington
+Pang Wei Koh,https://koh.pw/,Reliable and robust machine learning systems,Not Sure,CIS PhD,University of Washington
+Yulia Tsvetkov,https://homes.cs.washington.edu/~yuliats/,"Multilingual NLP, ethics, sociolinguistics",Not Sure,CIS PhD,University of Washington
+Rajesh P. N. Rao,https://www.rajeshpnrao.com/,Brain-computer interfaces and neuro-AI,Not Sure,CIS PhD,University of Washington
+Su-In Lee,https://suinlee.cs.washington.edu/,Explainable AI for biomedicine and genomics,Not Sure,CIS PhD,University of Washington
+Steven Seitz,https://www.smseitz.com/,"Computer vision, VR/AR, computational photography",Not Sure,CIS PhD,University of Washington
+Abhishek Gupta,https://homes.cs.washington.edu/~abhgupta/,Reinforcement learning and robot manipulation,Not Sure,CIS PhD,University of Washington
+Andrea C. Arpaci-Dusseau,https://pages.cs.wisc.edu/~dusseau/,Operating systems & storage systems,Not Sure,CIS PhD,University of Wisconsin–Madison
+Remzi H. Arpaci-Dusseau,https://pages.cs.wisc.edu/~remzi/,File systems & OS design,Not Sure,CIS PhD,University of Wisconsin–Madison
+Aws Albarghouthi,https://pages.cs.wisc.edu/~aws/,Program synthesis & verification,Not Sure,CIS PhD,University of Wisconsin–Madison
+Ali Abedi,https://pages.cs.wisc.edu/~abedi/,Wireless & IoT networking systems,Not Sure,CIS PhD,University of Wisconsin–Madison
+Suman Banerjee,https://pages.cs.wisc.edu/~suman/,Mobile & wireless networking,Not Sure,CIS PhD,University of Wisconsin–Madison
+Paul Barford,https://pages.cs.wisc.edu/~pb/,Internet measurement & security,Not Sure,CIS PhD,University of Wisconsin–Madison
+Jin-Yi Cai,https://pages.cs.wisc.edu/~jyc/,Computational complexity theory,Not Sure,CIS PhD,University of Wisconsin–Madison
+Thomas W. Reps,https://pages.cs.wisc.edu/~reps/,Program analysis & verification,Not Sure,CIS PhD,University of Wisconsin–Madison
+Barton P. Miller,https://pages.cs.wisc.edu/~bart/,Software security & analysis tools,Not Sure,CIS PhD,University of Wisconsin–Madison
+Miron Livny,https://research.cs.wisc.edu/htcondor/,Distributed & high-throughput computing,Not Sure,CIS PhD,University of Wisconsin–Madison
+Michael M. Swift,https://pages.cs.wisc.edu/~swift/,Operating systems & virtualization,Not Sure,CIS PhD,University of Wisconsin–Madison
+Patrick McDaniel,https://pages.cs.wisc.edu/~pdmcdan/,Systems security & privacy,Not Sure,CIS PhD,University of Wisconsin–Madison
+Xiaojin (Jerry) Zhu,https://pages.cs.wisc.edu/~jerryzhu/,Machine learning & machine teaching,Not Sure,CIS PhD,University of Wisconsin–Madison
+Karu Sankaralingam,https://www.ece.wisc.edu/people/sankaralingam-karu/,Computer architecture & compilers,Not Sure,CIS PhD,University of Wisconsin–Madison
+Shivaram Venkataraman,https://shivaram.cs.wisc.edu/,Systems for large-scale ML,Not Sure,CIS PhD,University of Wisconsin–Madison
+Stephen J. Wright,https://pages.cs.wisc.edu/~swright/,Optimization algorithms & ML,Not Sure,CIS PhD,University of Wisconsin–Madison
+Bilge Mutlu,https://bilgemutlu.com/,Human-robot interaction & HCI,Not Sure,CIS PhD,University of Wisconsin–Madison
+Xiangyao Yu,https://pages.cs.wisc.edu/~yxy/,Cloud-native database systems,Not Sure,CIS PhD,University of Wisconsin–Madison
+Akarsh Prabhakara,https://akarsh-prabhakara.github.io/,Wireless sensing & cyber-physical systems,Not Sure,CIS PhD,University of Wisconsin–Madison
+Mohit Gupta,https://wisionlab.com/people/mohit-gupta/,Computational imaging & vision,Not Sure,CIS PhD,University of Wisconsin–Madison
+Dimitris Papailiopoulos,https://papail.io/,Large-scale ML & optimization,Not Sure,CIS PhD,University of Wisconsin–Madison
+Yudong Chen,https://pages.cs.wisc.edu/~yudongchen/,Machine learning & statistics,Not Sure,CIS PhD,University of Wisconsin–Madison
+Ben Liblit,https://pages.cs.wisc.edu/~liblit/,Software engineering & debugging,Not Sure,CIS PhD,University of Wisconsin–Madison
+Eftychios Sifakis,https://pages.cs.wisc.edu/~sifakis/,Physics-based graphics simulation,Not Sure,CIS PhD,University of Wisconsin–Madison
+Michael C. Ferris,https://pages.cs.wisc.edu/~ferris/,Optimization theory & applications,Not Sure,CIS PhD,University of Wisconsin–Madison
+Sharon Li,https://pages.cs.wisc.edu/~sharonli/,Trustworthy & open-set ML,Not Sure,CIS PhD,University of Wisconsin–Madison
+Dieter van Melkebeek,https://pages.cs.wisc.edu/~dieter/,Computational complexity theory,Not Sure,CIS PhD,University of Wisconsin–Madison
+Amos Ron,https://pages.cs.wisc.edu/~amos/,Approximation theory & wavelets,Not Sure,CIS PhD,University of Wisconsin–Madison
+Zhong Shao,https://www.cs.yale.edu/homes/shao-zhong/,"Verified software, formal methods, secure operating systems",Not Sure,CIS PhD,Yale University
+Daniel Abadi,https://www.danielabadi.net/,Scalable distributed and cloud database systems,Not Sure,CIS PhD,Yale University
+Holly Rushmeier,https://graphics.cs.yale.edu/people/holly-rushmeier,"Computer graphics, material appearance, heritage",Not Sure,CIS PhD,Yale University
+Brian Scassellati,https://scazlab.yale.edu/people/brian-scassellati,Social robotics and human–robot interaction,Not Sure,CIS PhD,Yale University
+Joan Feigenbaum,https://www.cs.yale.edu/~jf,"Security, privacy, algorithmic mechanism design",Not Sure,CIS PhD,Yale University
+Anna C. Gilbert,https://annacgilbert.github.io/,"Randomized algorithms, signal processing, big data",Not Sure,CIS PhD,Yale University
+Daniel A. Spielman,https://www.cs.yale.edu/homes/spielman/,"Algorithms, networks, numerical linear algebra",Not Sure,CIS PhD,Yale University
+Nisheeth K. Vishnoi,https://www.cs.yale.edu/homes/vishnoi/Home.html,Optimization and theoretical computer science,Not Sure,CIS PhD,Yale University
+Julie Dorsey,https://graphics.cs.yale.edu/people/julie-dorsey,Sketch-based modeling and realistic graphics,Not Sure,CIS PhD,Yale University
+Theodore Kim,https://www.tkim.graphics/,Physics-based simulation and visual effects,Not Sure,CIS PhD,Yale University
+Abraham Silberschatz,http://www.cs.yale.edu/~avi/,Operating systems and database systems,Not Sure,CIS PhD,Yale University
+James Aspnes,https://www.cs.yale.edu/homes/aspnes/,Distributed algorithms and fault tolerance,Not Sure,CIS PhD,Yale University
+David Gelernter,https://cpsc.yale.edu/people/david-gelernter,"Parallel programming, information management, middleware",Not Sure,CIS PhD,Yale University
+Ruzica Piskac,https://www.cs.yale.edu/homes/piskac/,"Formal verification, security, automated reasoning",Not Sure,CIS PhD,Yale University
+Smita Krishnaswamy,https://krishnaswamylab.org/,Manifold and deep learning for biomedical data,Not Sure,CIS PhD,Yale University
+Charalampos Papamanthou,https://www.cs.yale.edu/homes/cpap/,Applied cryptography and secure data structures,Not Sure,CIS PhD,Yale University
+Lin Zhong,https://www.linzhong.org/,"Mobile systems, wireless networking, HCI",Not Sure,CIS PhD,Yale University
+Anurag Khandelwal,https://www.anuragkhandelwal.com/,Distributed data systems and cloud networks,Not Sure,CIS PhD,Yale University
+Rex (Zhitao) Ying,https://www.cs.yale.edu/homes/ying-rex/,Graph neural networks and geometric deep learning,Not Sure,CIS PhD,Yale University
+Yongshan Ding,https://www.yongshanding.com/,Quantum computing architectures and algorithms,Not Sure,CIS PhD,Yale University
+Alex Wong,https://www.cs.yale.edu/homes/wong-alex/,"Computer vision, depth estimation, scene understanding",Not Sure,CIS PhD,Yale University
+Andre Wibisono,https://www.cs.yale.edu/homes/wibisono/,Optimization theory for machine learning,Not Sure,CIS PhD,Yale University
+Manolis Zampetakis,https://mzampet.com/,Theoretical machine learning and statistics,Not Sure,CIS PhD,Yale University
+Arman Cohan,https://armancohan.com/,"NLP, scientific text mining, large models",Not Sure,CIS PhD,Yale University
+Aikaterini Sotiraki,https://sotiraki.com/,Post-quantum cryptography and complexity theory,Not Sure,CIS PhD,Yale University
+Ben Fisch,https://sites.google.com/site/benafisch/,"Cryptocurrencies, privacy, verifiable computation",Not Sure,CIS PhD,Yale University
+Daniel Rakita,https://dannyrakita.net/,"Robot manipulation, motion planning, shared autonomy",Not Sure,CIS PhD,Yale University
+Marynel Vázquez,https://www.marynel.net/,Multi-party human-robot interaction,Not Sure,CIS PhD,Yale University
+Tesca Fitzgerald,https://www.tescafitzgerald.com/,Interactive robot learning and task adaptation,Not Sure,CIS PhD,Yale University
+Yang Cai,https://www.cs.yale.edu/homes/cai/,Algorithmic game theory and mechanism design,Not Sure,CIS PhD,Yale University
+Pieter Abbeel,https://people.eecs.berkeley.edu/~pabbeel/,"Robot learning, deep reinforcement learning",Not Sure,CIS PhD,"University of California, Berkeley"
+Ion Stoica,https://people.eecs.berkeley.edu/~istoica/,"Distributed systems, cloud computing, networking",Not Sure,CIS PhD,"University of California, Berkeley"
+Dawn Song,https://people.eecs.berkeley.edu/~dawnsong/,"Security, AI safety, trustworthy machine learning",Not Sure,CIS PhD,"University of California, Berkeley"
+Jitendra Malik,https://people.eecs.berkeley.edu/~malik/,"Computer vision, perception, image understanding",Not Sure,CIS PhD,"University of California, Berkeley"
+Stuart Russell,https://people.eecs.berkeley.edu/~russell/,"Artificial intelligence, probabilistic reasoning, ethics",Not Sure,CIS PhD,"University of California, Berkeley"
+Michael I. Jordan,https://people.eecs.berkeley.edu/~jordan/,"Machine learning, statistics, optimization",Not Sure,CIS PhD,"University of California, Berkeley"
+Raluca Ada Popa,https://people.eecs.berkeley.edu/~raluca/,"Applied cryptography, secure data systems",Not Sure,CIS PhD,"University of California, Berkeley"
+Sergey Levine,https://people.eecs.berkeley.edu/~svlevine/,"Robotics, reinforcement learning, control",Not Sure,CIS PhD,"University of California, Berkeley"
+Trevor Darrell,https://people.eecs.berkeley.edu/~trevor/,"Visual recognition, multimodal AI, deep vision",Not Sure,CIS PhD,"University of California, Berkeley"
+Moritz Hardt,https://people.eecs.berkeley.edu/~mhardt/,"Fairness, accountability, ethics in ML",Not Sure,CIS PhD,"University of California, Berkeley"
+Sanjit A. Seshia,https://people.eecs.berkeley.edu/~sseshia/,"Formal methods, cyber-physical system verification",Not Sure,CIS PhD,"University of California, Berkeley"
+Kurt Keutzer,https://people.eecs.berkeley.edu/~keutzer/,"Deep learning acceleration, synthesis tools",Not Sure,CIS PhD,"University of California, Berkeley"
+James Demmel,http://www.cs.berkeley.edu/~demmel/,"Numerical linear algebra, HPC algorithms",Not Sure,CIS PhD,"University of California, Berkeley"
+John Kubiatowicz,https://people.eecs.berkeley.edu/~kubitron/,"Distributed storage, parallel architectures",Not Sure,CIS PhD,"University of California, Berkeley"
+Claire Tomlin,https://people.eecs.berkeley.edu/~tomlin/,"Hybrid systems, safety control, autonomy",Not Sure,CIS PhD,"University of California, Berkeley"
+Ren Ng,https://people.eecs.berkeley.edu/~renng/,"Computational photography, light-field imaging",Not Sure,CIS PhD,"University of California, Berkeley"
+Koushik Sen,https://people.eecs.berkeley.edu/~ksen/,"Software testing, dynamic analysis, concurrency",Not Sure,CIS PhD,"University of California, Berkeley"
+Jennifer Listgarten,https://people.eecs.berkeley.edu/~jennl/,ML for genomics and computational biology,Not Sure,CIS PhD,"University of California, Berkeley"
+Alessandro Chiesa,https://people.eecs.berkeley.edu/~alexch/,"Zero-knowledge proofs, blockchain protocols",Not Sure,CIS PhD,"University of California, Berkeley"
+Somayeh Sojoudi,https://people.eecs.berkeley.edu/~sojoudi/,"Optimization, control theory, power systems",Not Sure,CIS PhD,"University of California, Berkeley"
+Hany Farid,https://farid.berkeley.edu/,"Image forensics, deepfake detection, integrity",Not Sure,CIS PhD,"University of California, Berkeley"
+Bin Yu,https://www.stat.berkeley.edu/~binyu/,"Statistical ML, interpretability, causality",Not Sure,CIS PhD,"University of California, Berkeley"
+Armando Fox,https://people.eecs.berkeley.edu/~fox/,"Software engineering, CS education, cloud",Not Sure,CIS PhD,"University of California, Berkeley"
+Joseph E. Gonzalez,https://people.eecs.berkeley.edu/~jegonzal/,"Scalable graph analytics, ML systems",Not Sure,CIS PhD,"University of California, Berkeley"
+Ken Goldberg,https://goldberg.berkeley.edu/,"Robotics, automation, human-robot interaction",Not Sure,CIS PhD,"University of California, Berkeley"
+Scott Shenker,https://people.eecs.berkeley.edu/~shenker/,"Computer networks, SDN, internet architecture",Not Sure,CIS PhD,"University of California, Berkeley"
+David Bamman,https://people.ischool.berkeley.edu/~dbamman/,"Natural language processing, cultural analytics",Not Sure,CIS PhD,"University of California, Berkeley"
+Jacob Steinhardt,https://people.eecs.berkeley.edu/~jsteinhardt/,"Robust ML, alignment, societal impacts",Not Sure,CIS PhD,"University of California, Berkeley"
+Irene Chen,https://www.irenekchen.com/,"ML fairness, healthcare, clinical bias mitigation",Not Sure,CIS PhD,"University of California, Berkeley"
+Lijie Chen,https://people.eecs.berkeley.edu/~lijiechen/,"Algorithms, complexity theory, quantum proofs",Not Sure,CIS PhD,"University of California, Berkeley"
+Ugur Cetintemel,https://cs.brown.edu/people/faculty/ugur/,Data streams and distributed database systems,Not Sure,CIS PhD,Brown
+Shriram Krishnamurthi,https://cs.brown.edu/people/faculty/sk/,Programming languages software engineering and education,Not Sure,CIS PhD,Brown
+Anna Lysyanskaya,https://cs.brown.edu/~alysyans/,Cryptography and anonymous credential systems,Not Sure,CIS PhD,Brown
+Michael Littman,https://cs.brown.edu/~mlittman/,Reinforcement learning and decision making AI,Not Sure,CIS PhD,Brown
+Tim Kraska,https://cs.brown.edu/people/tkraska/,Learned data systems and cloud scale databases,Not Sure,CIS PhD,Brown
+Amy Greenwald,https://cs.brown.edu/people/faculty/amy/,Algorithmic game theory and multi agent learning,Not Sure,CIS PhD,Brown
+David Laidlaw,https://cs.brown.edu/~dhl/,Scientific visualization and medical graphics,Not Sure,CIS PhD,Brown
+James Tompkin,https://cs.brown.edu/people/faculty/jtompki1/,Computational photography and immersive graphics,Not Sure,CIS PhD,Brown
+Jeff Huang,https://cs.brown.edu/people/jeff/,Human computer interaction and web behavior mining,Not Sure,CIS PhD,Brown
+Vasileios Kemerlis,https://cs.brown.edu/~vpk/,Operating system and microarchitectural security,Not Sure,CIS PhD,Brown
+Yu Cheng,https://cs.brown.edu/people/ycheng79/,Robust optimization and theoretical machine learning,Not Sure,CIS PhD,Brown
+Stephen Bach,https://cs.brown.edu/people/sbach/,Weak supervision and interpretable machine learning,Not Sure,CIS PhD,Brown
+Malte Schwarzkopf,https://cs.brown.edu/people/malte/,Cloud operating systems and distributed computing,Not Sure,CIS PhD,Brown
+Ellie Pavlick,https://cs.brown.edu/people/epavlick/,Natural language understanding and semantics,Not Sure,CIS PhD,Brown
+Ritambhara Singh,https://cs.brown.edu/people/faculty/rsingh47/,Deep learning for genomics and precision medicine,Not Sure,CIS PhD,Brown
+Chen Sun,https://cs.brown.edu/people/faculty/csun45/,Video understanding and multimodal computer vision,Not Sure,CIS PhD,Brown
+Srinath Sridhar,https://cs.brown.edu/people/faculty/ssrinath/,3D vision shape understanding and deep learning,Not Sure,CIS PhD,Brown
+Nikos Vasilakis,https://cs.brown.edu/people/faculty/nikolas/,Secure distributed systems and language runtimes,Not Sure,CIS PhD,Brown
+Peihan Miao,https://cs.brown.edu/people/faculty/pmiao/,Cryptography for privacy preserving blockchains,Not Sure,CIS PhD,Brown
+Randall Balestriero,https://cs.brown.edu/people/faculty/rbalestr/,Deep learning theory and generative models,Not Sure,CIS PhD,Brown
+Karianne Bergen,https://sites.brown.edu/bergen-lab/,Machine learning for earthquake seismology data,Not Sure,CIS PhD,Brown
+Serena Booth,https://cs.brown.edu/people/faculty/sbooth3/,Human AI collaboration and assistive robotics,Not Sure,CIS PhD,Brown
+Pedro Felzenszwalb,https://cs.brown.edu/people/pfelzens/,Computer vision and object recognition algorithms,Not Sure,CIS PhD,Brown
+Stefanie Tellex,https://h2r.cs.brown.edu/,Robotics language grounding and human robot interaction,Not Sure,CIS PhD,Brown
+Daniel Ritchie,https://cs.brown.edu/people/faculty/dritchi1/,Program synthesis for graphics and 3D modeling,Not Sure,CIS PhD,Brown
+Rodrigo Fonseca,https://cs.brown.edu/~rfonseca/,Distributed systems networking and performance analysis,Not Sure,CIS PhD,Brown
+Lorenzo De Stefani,https://cs.brown.edu/people/faculty/ld9/,Graph algorithms and randomized methods,Not Sure,CIS PhD,Brown
+Eli Upfal,https://cs.brown.edu/people/eupfal/,Randomized algorithms and probabilistic analysis,Not Sure,CIS PhD,Brown
+Maurice Herlihy,https://cs.brown.edu/~mph/,Concurrent algorithms and distributed computing,Not Sure,CIS PhD,Brown
+Ellis Hershkowitz,https://cs.brown.edu/people/faculty/dhershko/,Graph algorithms and streaming complexity,Not Sure,CIS PhD,Brown
+David G. Andersen,https://www.cs.cmu.edu/~dga/,"Networked systems, distributed storage, ML infrastructure",Not Sure,CIS PhD,CMU
+Zico Kolter,https://www.cs.cmu.edu/~zkolter/,"Robust machine learning, optimization, energy-efficient AI",Not Sure,CIS PhD,CMU
+Aditi Raghunathan,https://www.cs.cmu.edu/~aditir/,"Reliable deep learning, robustness, generalization theory",Not Sure,CIS PhD,CMU
+Matt Fredrikson,https://www.cs.cmu.edu/~mfredrik/,"Privacy, security, and machine-learning fairness methods",Not Sure,CIS PhD,CMU
+Lujo Bauer,https://www.cs.cmu.edu/~lbauer/,"Computer security, usable privacy, authentication systems",Not Sure,CIS PhD,CMU
+Elaine Shi,https://www.cs.cmu.edu/~elaines/,"Cryptography, blockchains, secure computation protocols",Not Sure,CIS PhD,CMU
+Justine Sherry,https://www.cs.cmu.edu/~justines/,"Internet architecture, middleboxes, network performance",Not Sure,CIS PhD,CMU
+Barnabás Póczos,https://www.cs.cmu.edu/~bapoczos/,"Statistical ML, non-parametric inference, applications",Not Sure,CIS PhD,CMU
+Aarti Singh,https://www.cs.cmu.edu/~aarti/,"High-dimensional ML, active sampling, signal recovery",Not Sure,CIS PhD,CMU
+Mor Harchol-Balter,https://www.cs.cmu.edu/~harchol/,"Performance modeling, queuing theory, scheduling",Not Sure,CIS PhD,CMU
+Christos Faloutsos,http://www.cs.cmu.edu/~christos/,"Graph mining, anomaly detection, scalable data analysis",Not Sure,CIS PhD,CMU
+Bryan Parno,https://www.cs.cmu.edu/~bparno/,"Systems security, verified cryptography, secure hardware",Not Sure,CIS PhD,CMU
+Lorrie Cranor,https://lorrie.cranor.org/,"Privacy, usable security, online disclosure controls",Not Sure,CIS PhD,CMU
+Nicolas Christin,https://www.andrew.cmu.edu/user/nicolasc/,"Cybercrime economics, network security, privacy",Not Sure,CIS PhD,CMU
+Srinivasan Seshan,https://www.cs.cmu.edu/~srini/,"Computer networks, wireless protocols, performance",Not Sure,CIS PhD,CMU
+Kayvon Fatahalian,http://graphics.cs.cmu.edu/people/kayvonf/,"Computer graphics, GPU systems, large-scale rendering",Not Sure,CIS PhD,CMU
+Ruslan Salakhutdinov,http://www.cs.cmu.edu/~rsalakhu/,"Deep learning, probabilistic models, AI systems",Not Sure,CIS PhD,CMU
+Ariel Procaccia,https://procaccia.info/,"AI for social good, computational social choice, fairness",Not Sure,CIS PhD,CMU
+Anupam Datta,https://www.andrew.cmu.edu/user/danupam/,"Privacy, accountability, trustworthy ML, security",Not Sure,CIS PhD,CMU
+Gauri Joshi,https://www.andrew.cmu.edu/user/gaurij/,"Distributed ML, edge computing, latency analysis",Not Sure,CIS PhD,CMU
+Virginia Smith,http://www.cs.cmu.edu/~smithv/,"Federated learning, distributed optimization, ML theory",Not Sure,CIS PhD,CMU
+Nathan Beckmann,http://www.cs.cmu.edu/~beckmann/,"Computer architecture, memory systems, caching",Not Sure,CIS PhD,CMU
+Dimitrios Skarlatos,https://www.cs.cmu.edu/~dskarlat/,"Data-center architecture, CPU-accelerator coherence",Not Sure,CIS PhD,CMU
+Limin Jia,https://www.cs.cmu.edu/~lijia/,"Logic-based security, formal verification, cyber-physical",Not Sure,CIS PhD,CMU
+Yuvraj Agarwal,https://www.cmu.edu/engineering/ece/people/faculty/yuvraj-agarwal.html,"Energy-aware systems, mobile sensing, IoT security",Not Sure,CIS PhD,CMU
+Claire Le Goues,https://www.cs.cmu.edu/~clegoues/,"Automated program repair, software engineering, PL",Not Sure,CIS PhD,CMU
+Aaditya Ramdas,https://www.adityaramdas.com/,"Statistical inference, ML reliability, online testing",Not Sure,CIS PhD,CMU
+Deepak Pathak,http://www.cs.cmu.edu/~pathak/,"Embodied AI, self-supervised learning, robot cognition",Not Sure,CIS PhD,CMU
+Martial Hebert,https://www.cs.cmu.edu/~hebert/,"Computer vision, scene understanding, robotics",Not Sure,CIS PhD,CMU
+Deva Ramanan,http://www.cs.cmu.edu/~deva/,"Visual recognition, human-object detection, AI vision",Not Sure,CIS PhD,CMU
+Shree K. Nayar,http://www.cs.columbia.edu/~nayar,"Computer vision, imaging, computational photography",Not Sure,CIS PhD,Columbia
+Steven K. Feiner,http://www.cs.columbia.edu/~feiner,"Augmented reality, 3D user interfaces, HCI",Not Sure,CIS PhD,Columbia
+Shih-Fu Chang,https://www.ee.columbia.edu/~sfchang/,"Multimedia search, vision, machine learning",Not Sure,CIS PhD,Columbia
+Luca P. Carloni,http://www.cs.columbia.edu/~luca,"System-on-Chip design, embedded & cyber-physical systems",Not Sure,CIS PhD,Columbia
+Jeannette M. Wing,http://www.cs.columbia.edu/~wing,"Trustworthy AI, security, formal methods",Not Sure,CIS PhD,Columbia
+Tim Roughgarden,https://timroughgarden.org,"Algorithms, game theory, mechanism design",Not Sure,CIS PhD,Columbia
+David M. Blei,http://www.cs.columbia.edu/~blei/,"Probabilistic machine learning, topic models",Not Sure,CIS PhD,Columbia
+Julia Hirschberg,http://www.cs.columbia.edu/~julia/,"Speech prosody, dialogue systems, NLP",Not Sure,CIS PhD,Columbia
+Ronghui Gu,https://www.guronghui.com/,Formal verification of operating systems,Not Sure,CIS PhD,Columbia
+Martha A. Kim,http://www.cs.columbia.edu/~martha/,"Parallel computer architecture, memory systems",Not Sure,CIS PhD,Columbia
+Roxana Geambasu,https://roxanageambasu.github.io/,"Distributed systems, privacy, cloud security",Not Sure,CIS PhD,Columbia
+Carl Vondrick,http://www.cs.columbia.edu/~vondrick/,Computer vision and multimodal perception,Not Sure,CIS PhD,Columbia
+Eugene Wu,https://www.eugenewu.net/,"Databases, visualization, interactive analytics",Not Sure,CIS PhD,Columbia
+Kathleen McKeown,http://www.cs.columbia.edu/~kathy/,Natural language generation and summarization,Not Sure,CIS PhD,Columbia
+Baishakhi Ray,https://www.rayb.info/,AI-driven software engineering and reliability,Not Sure,CIS PhD,Columbia
+Suman Jana,https://sumanj.info/,"Security, privacy, machine-learning robustness",Not Sure,CIS PhD,Columbia
+Daniel J. Hsu,http://www.cs.columbia.edu/~djhsu/,"Machine-learning theory, algorithmic statistics",Not Sure,CIS PhD,Columbia
+Alexandr Andoni,http://www.cs.columbia.edu/~andoni/,"Sublinear algorithms, high-dimensional geometry",Not Sure,CIS PhD,Columbia
+Elias Bareinboim,https://causalai.net/,Causal inference in AI and machine learning,Not Sure,CIS PhD,Columbia
+Luis Gravano,http://www.cs.columbia.edu/~gravano/,Information retrieval and web search,Not Sure,CIS PhD,Columbia
+Jason Nieh,http://www.cs.columbia.edu/~nieh/,"Operating systems, virtualization, cloud",Not Sure,CIS PhD,Columbia
+Vishal Misra,https://www.cs.columbia.edu/~misra/,"Networking, Internet economics, performance",Not Sure,CIS PhD,Columbia
+Gail Kaiser,https://www.cs.columbia.edu/~kaiser/,"Program analysis, software testing, security",Not Sure,CIS PhD,Columbia
+Clifford Stein,https://www.columbia.edu/~cs2035/,"Algorithms, combinatorial optimization",Not Sure,CIS PhD,Columbia
+Simha Sethumadhavan,https://www.cs.columbia.edu/~simha/,Secure computer architecture and hardware,Not Sure,CIS PhD,Columbia
+Brian A. Smith,https://ceal.cs.columbia.edu/,"HCI, accessibility, augmented reality",Not Sure,CIS PhD,Columbia
+Yunzhu Li,https://yunzhuli.github.io/,Robotic manipulation and visuomotor learning,Not Sure,CIS PhD,Columbia
+Kostis Kaffes,https://www.cs.columbia.edu/~kkaffes/,"Cloud systems, microsecond-latency scheduling",Not Sure,CIS PhD,Columbia
+Josh Alman,https://joshalman.com/,Algebraic algorithms and complexity theory,Not Sure,CIS PhD,Columbia
+Lydia B. Chilton,https://www.cs.columbia.edu/~chilton/,"Computational design, crowdsourcing, HCI",Not Sure,CIS PhD,Columbia
+Mohamed Abdelfattah,https://www.cs.cornell.edu/people/mohamed,Machine-learning-centric computer systems,Not Sure,CIS PhD,Cornell
+Jayadev Acharya,https://www.cs.cornell.edu/people/jacharya,Information theory and algorithmic statistics,Not Sure,CIS PhD,Cornell
+Rachit Agarwal,https://www.cs.cornell.edu/people/rachit,Distributed systems and big data analytics,Not Sure,CIS PhD,Cornell
+David Albonesi,https://www.cs.cornell.edu/people/dalbonesi,Adaptive multi-core processor architectures,Not Sure,CIS PhD,Cornell
+Lorenzo Alvisi,https://www.cs.cornell.edu/people/lorenzo,Dependable distributed computing,Not Sure,CIS PhD,Cornell
+Yoav Artzi,https://www.cs.cornell.edu/people/yoav,Language modeling and natural language processing,Not Sure,CIS PhD,Cornell
+Hadar Averbuch-Elor,https://www.cs.cornell.edu/people/hadar,3D computer vision and generative AI,Not Sure,CIS PhD,Cornell
+Shiri Azenkot,https://www.cs.cornell.edu/people/shiri,Human-computer interaction and accessibility,Not Sure,CIS PhD,Cornell
+Kavita Bala,https://www.cs.cornell.edu/people/kbala,Visual recognition and material modeling,Not Sure,CIS PhD,Cornell
+Claire Cardie,https://www.cs.cornell.edu/people/cardie,Natural language processing and sentiment analysis,Not Sure,CIS PhD,Cornell
+Nicola Dell,https://www.cs.cornell.edu/people/ndell,Technology for underserved communities,Not Sure,CIS PhD,Cornell
+Susan R. Fussell,https://www.cs.cornell.edu/people/sfussell,Human-computer interaction and communication,Not Sure,CIS PhD,Cornell
+Carla Gomes,https://www.cs.cornell.edu/people/gomes,Computational sustainability and AI,Not Sure,CIS PhD,Cornell
+Daniel Susser,https://www.cs.cornell.edu/people/dsusser,Ethics and policy in computing,Not Sure,CIS PhD,Cornell
+Phoebe Sengers,https://www.cs.cornell.edu/people/sengers,Technology and society,Not Sure,CIS PhD,Cornell
+Éva Tardos,https://www.cs.cornell.edu/people/tardos,Algorithmic game theory and optimization,Not Sure,CIS PhD,Cornell
+Fred B. Schneider,https://www.cs.cornell.edu/people/fbs,Computer security and distributed systems,Not Sure,CIS PhD,Cornell
+Jon Kleinberg,https://www.cs.cornell.edu/people/kleinber,Networks and algorithmic foundations,Not Sure,CIS PhD,Cornell
+Thomas Ristenpart,https://www.cs.cornell.edu/people/ristenpart,Computer security and cryptography,Not Sure,CIS PhD,Cornell
+Angelique Taylor,https://www.cs.cornell.edu/people/ataylor,Robotics and human-robot interaction,Not Sure,CIS PhD,Cornell
+Angelina Wang,https://www.cs.cornell.edu/people/awang,Machine learning and fairness,Not Sure,CIS PhD,Cornell
+Tapomayukh Bhattacharjee,https://www.cs.cornell.edu/people/tapomayukh,Robotics for assistive technologies,Not Sure,CIS PhD,Cornell
+Kevin Ellis,https://www.cs.cornell.edu/people/kellis,Program synthesis and machine learning,Not Sure,CIS PhD,Cornell
+Sarah Dean,https://www.cs.cornell.edu/people/sdean,Control theory and machine learning,Not Sure,CIS PhD,Cornell
+Ian Lundberg,https://www.cs.cornell.edu/people/ilundberg,Social inequality and computational methods,Not Sure,CIS PhD,Cornell
+Alexandra Silva,https://www.cs.cornell.edu/people/asilva,Formal methods and programming languages,Not Sure,CIS PhD,Cornell
+Emma Pierson,https://www.cs.cornell.edu/people/epierson,Health disparities and computational methods,Not Sure,CIS PhD,Cornell
+Sam Wang,https://www.cs.cornell.edu/people/swang,Machine learning and healthcare,Not Sure,CIS PhD,Cornell
+Gili Vidan,https://www.cs.cornell.edu/people/gvidan,Technology and society,Not Sure,CIS PhD,Cornell
+Allison Koenecke,https://www.cs.cornell.edu/people/akoenecke,Algorithmic fairness and public policy,Not Sure,CIS PhD,Cornell
+Devin J. Balkcom,https://rlab.cs.dartmouth.edu/devin/,"Robotics, motion planning, robot manipulation and origami folding",Not Sure,CIS PhD,Dartmouth
+Sergey Bratus,https://www.cs.dartmouth.edu/~sergey/,"Cybersecurity, reverse engineering, weird machines, system security",Not Sure,CIS PhD,Dartmouth
+Adam Breuer,https://www.adambreuer.com,"Political behavior, social networks, misinformation, computational politics",Not Sure,CIS PhD,Dartmouth
+Andrew T. Campbell,https://www.cs.dartmouth.edu/~campbell/,"Mobile sensing, human-computer interaction, digital health, ubiquitous systems",Not Sure,CIS PhD,Dartmouth
+Michael A. Casey,https://www.cs.dartmouth.edu/~mcasey/,"Music informatics, audio signal processing, computational musicology, AI",Not Sure,CIS PhD,Dartmouth
+Amit Chakrabarti,https://www.cs.dartmouth.edu/~ac/,"Algorithms, computational complexity, communication complexity, streaming",Not Sure,CIS PhD,Dartmouth
+Deeparnab Chakrabarty,https://www.cs.dartmouth.edu/~deepc/,"Approximation algorithms, sublinear algorithms, combinatorial optimization",Not Sure,CIS PhD,Dartmouth
+Hsien-Chih Chang,https://hcsoso.github.io/,"Computational topology, geometric algorithms, graph drawing complexity",Not Sure,CIS PhD,Dartmouth
+Christophe Hauser,https://kereoz.github.io/,"Software and systems security, binary analysis, trustworthy computing",Not Sure,CIS PhD,Dartmouth
+Gevorg Grigoryan,https://grigoryanlab.org/,"Computational protein design, structural bioinformatics, allostery modeling",Not Sure,CIS PhD,Dartmouth
+Wojciech Jarosz,https://www.cs.dartmouth.edu/~wjarosz/,"Physically based rendering, light transport simulation, computational graphics",Not Sure,CIS PhD,Dartmouth
+Siddhartha V. Jayanti,https://sites.google.com/view/siddhartha-jayanti/,"Concurrent data structures, synchronization, distributed algorithms theory",Not Sure,CIS PhD,Dartmouth
+Prasad Jayanti,https://www.cs.dartmouth.edu/~prasad/,"Distributed algorithms, concurrency, fault tolerance, shared memory theory",Not Sure,CIS PhD,Dartmouth
+Souyoung Jin,https://souyoungjin.github.io/,"Video understanding, multimodal learning, vision-language models",Not Sure,CIS PhD,Dartmouth
+Kyungtae Kim,https://www.cs.dartmouth.edu/~kyungtae/,"Systems and software security, program analysis, fuzzing, vulnerability detectio",Not Sure,CIS PhD,Dartmouth
+David Kotz,https://www.cs.dartmouth.edu/~dfk/,"Security and privacy in smart homes, mobile health sensing, IoT systems",Not Sure,CIS PhD,Dartmouth
+Lorie Loeb,https://www.cs.dartmouth.edu/~lorie/,"Data visualization, digital arts, persuasive design, human-centered computing",Not Sure,CIS PhD,Dartmouth
+Alberto Quattrini Li,https://rlab.cs.dartmouth.edu/albertoq/,"Autonomous mobile robotics, multirobot exploration, marine robotics AI",Not Sure,CIS PhD,Dartmouth
+Temiloluwa Prioleau,https://www.t-prioleau.com/,"Digital health, wearable sensing, personalized computational health",Not Sure,CIS PhD,Dartmouth
+Sarah Masud Preum,https://persist-lab.github.io/,"NLP for health, temporal modeling, human-AI decision support in healthcare",Not Sure,CIS PhD,Dartmouth
+Daniel Rockmore,https://www.cs.dartmouth.edu/~rockmore/,"Applied harmonic analysis, machine learning, complex systems, digital humanities",Not Sure,CIS PhD,Dartmouth
+O. Sami Saydjari,https://web.cs.dartmouth.edu/people/o-sami-saydjari,"Cybersecurity engineering, critical infrastructure defense, trustworthy systems",Not Sure,CIS PhD,Dartmouth
+Sean W. Smith,https://www.cs.dartmouth.edu/~sws/,"Systems security, trustworthy computing, cryptography, network architecture",Not Sure,CIS PhD,Dartmouth
+Soroush Vosoughi,https://www.cs.dartmouth.edu/~soroush/,"NLP, large language models, computational social science, misinformation",Not Sure,CIS PhD,Dartmouth
+Tam Vu,https://faculty-directory.dartmouth.edu/tam-vu,"Wearable neurotech, AI sensing, mobile health, earable computing",Not Sure,CIS PhD,Dartmouth
+Peter Winkler,https://www.math.dartmouth.edu/~pw/,"Combinatorics, probability, theoretical computer science, mathematical puzzles",Not Sure,CIS PhD,Dartmouth
+Tim Tregubov,https://www.zingweb.com/,"Educational web dev, digital product design, experiential learning pedagogy",Not Sure,CIS PhD,Dartmouth
+Yu-Wing Tai,https://yuwingtai.github.io/,"Computer vision, deep learning, multimodal generative AI, 3D reconstruction",Not Sure,CIS PhD,Dartmouth
+Yujun Yan,https://sites.google.com/umich.edu/yujunyan/,"Graph ML, network science, generalizable GNNs, neuroscience applications",Not Sure,CIS PhD,Dartmouth
+Yaoqing Yang,https://sites.google.com/site/yangyaoqingcmu/,"ML diagnostics, information theory, 3D point clouds, distributed optimization",Not Sure,CIS PhD,Dartmouth
+Jacob Abernethy,https://www.cc.gatech.edu/~jabernethy9/,Machine learning theory,Not Sure,CIS PhD,Georgia Tech
+Mustaque Ahamad,https://faculty.cc.gatech.edu/~mustaq/,Systems and network security,Not Sure,CIS PhD,Georgia Tech
+Joy Arulraj,https://faculty.cc.gatech.edu/~jarulraj/,High-performance database systems,Not Sure,CIS PhD,Georgia Tech
+Suguman Bansal,https://suguman.github.io/,Formal methods for trustworthy AI and safe ML systems,Not Sure,CIS PhD,Georgia Tech
+Alexandra Boldyreva,https://www.cc.gatech.edu/~aboldyre/,Cryptography,Not Sure,CIS PhD,Georgia Tech
+Zongchen Chen,https://sites.gatech.edu/zongchenchen/,Randomized algorithms and discrete probability,Not Sure,CIS PhD,Georgia Tech
+Alexandros Daglis,https://www.cc.gatech.edu/~adaglis/,Rack-scale computing,Not Sure,CIS PhD,Georgia Tech
+Ashutosh Dhekne,https://www.cc.gatech.edu/~dhekne/,Wireless networking,Not Sure,CIS PhD,Georgia Tech
+Ada Gavrilovska,https://sites.cc.gatech.edu/home/ada/,Edge and memory-centric high-performance systems,Not Sure,CIS PhD,Georgia Tech
+Tushar Krishna,https://tusharkrishna.ece.gatech.edu/,On-chip networks and hardware accelerators for AI,Not Sure,CIS PhD,Georgia Tech
+Taesoo Kim,https://taesoo.kim/,Systems and software security,Not Sure,CIS PhD,Georgia Tech
+Wenke Lee,https://wenke.gtisc.gatech.edu/,Network security,Not Sure,CIS PhD,Georgia Tech
+Richard DeMillo,http://www.demillo.com/,Cybersecurity policy,Not Sure,CIS PhD,Georgia Tech
+Vivek Sarkar,https://vsarkar.cc.gatech.edu/,Parallel programming languages,Not Sure,CIS PhD,Georgia Tech
+Calton Pu,https://faculty.cc.gatech.edu/~calton/,Distributed systems,Not Sure,CIS PhD,Georgia Tech
+Umakishore Ramachandran,https://www.cc.gatech.edu/~rama/,Parallel and distributed systems,Not Sure,CIS PhD,Georgia Tech
+Haesun Park,https://faculty.cc.gatech.edu/~hpark/,Numerical algorithms,Not Sure,CIS PhD,Georgia Tech
+B. Aditya Prakash,https://faculty.cc.gatech.edu/~badityap/,Graph mining,Not Sure,CIS PhD,Georgia Tech
+Milos Prvulovic,https://faculty.cc.gatech.edu/~milos/,Secure computer architecture,Not Sure,CIS PhD,Georgia Tech
+Thomas Conte,https://www.conte.us/,Post-Moore computer architectures,Not Sure,CIS PhD,Georgia Tech
+Arijit Raychowdhury,https://icsrl.ece.gatech.edu/,Low-power circuits,Not Sure,CIS PhD,Georgia Tech
+Sung Kyu Lim,https://limsk.ece.gatech.edu/,3D IC physical design,Not Sure,CIS PhD,Georgia Tech
+Raheem Beyah,https://rbeyah.ece.gatech.edu/,Network security,Not Sure,CIS PhD,Georgia Tech
+Sarita V. Adve,https://sadve.cs.illinois.edu/,Computer architecture and XR systems,Not Sure,CIS PhD,Illinois
+Vikram S. Adve,https://vikram.cs.illinois.edu/,Compilers LLVM and heterogeneous computing,Not Sure,CIS PhD,Illinois
+Tarek Abdelzaher,https://abdelzaher.cs.illinois.edu/,Real-time cyber-physical social sensing,Not Sure,CIS PhD,Illinois
+Jiawei Han,https://hanj.cs.illinois.edu/,Data and text mining knowledge graphs,Not Sure,CIS PhD,Illinois
+Julia Hockenmaier,https://juliahmr.cs.illinois.edu/,Computational linguistics and vision language,Not Sure,CIS PhD,Illinois
+Derek Hoiem,https://dhoiem.cs.illinois.edu/,3D computer vision scene understanding,Not Sure,CIS PhD,Illinois
+Alexander Schwing,https://www.alexander-schwing.de/,Deep learning probabilistic vision models,Not Sure,CIS PhD,Illinois
+Bo Li,https://boli.cs.illinois.edu/,Adversarial machine learning and AI security,Not Sure,CIS PhD,Illinois
+David Forsyth,https://daf.cs.illinois.edu/,Computer vision graphics AI ethics,Not Sure,CIS PhD,Illinois
+Lav R. Varshney,https://varshney.csl.illinois.edu/,Information theory creativity and AI systems,Not Sure,CIS PhD,Illinois
+Hanghang Tong,https://tonghanghang.org/,Graph mining network science data analytics,Not Sure,CIS PhD,Illinois
+ChengXiang Zhai,https://czhai.cs.illinois.edu/,Information retrieval NLP intelligent systems,Not Sure,CIS PhD,Illinois
+Josep Torrellas,https://iacoma.cs.uiuc.edu/,Parallel computer architecture memory systems,Not Sure,CIS PhD,Illinois
+Hari Sundaram,https://sundaram.cs.illinois.edu/,Multimedia search and social media analytics,Not Sure,CIS PhD,Illinois
+Jimeng Sun,https://sunlab.org/,AI for healthcare clinical prediction modeling,Not Sure,CIS PhD,Illinois
+Deepak Vasisht,https://deepakv.web.illinois.edu/,Wireless sensing and satellite networking,Not Sure,CIS PhD,Illinois
+Ling Ren,https://sites.google.com/view/renling,Cryptography blockchain privacy protocols,Not Sure,CIS PhD,Illinois
+Sayan Mitra,https://mitras.ece.illinois.edu/,Formal verification and safe autonomy,Not Sure,CIS PhD,Illinois
+Gagandeep Singh,https://ggndpsngh.github.io/,Neural network verification robustness,Not Sure,CIS PhD,Illinois
+Indranil Gupta,https://indy.cs.illinois.edu/,Distributed systems cloud fault tolerance,Not Sure,CIS PhD,Illinois
+Paris Smaragdis,https://paris.cs.illinois.edu/,Machine listening audio source separation,Not Sure,CIS PhD,Illinois
+Jian Huang,https://jianh.web.engr.illinois.edu/,Memory storage GPU systems architecture,Not Sure,CIS PhD,Illinois
+Klara Nahrstedt,https://monet.cs.illinois.edu/people/klara/,Multimedia QoS immersive networked systems,Not Sure,CIS PhD,Illinois
+Lui Sha,https://cpsil.cs.illinois.edu/people/lui-sha/,Real-time scheduling cyber-physical safety,Not Sure,CIS PhD,Illinois
+Darko Marinov,https://mir.cs.illinois.edu/marinov/,Software testing automated bug finding,Not Sure,CIS PhD,Illinois
+Chandra Chekuri,https://chekuri.cs.illinois.edu/,Approximation algorithms combinatorial optimization,Not Sure,CIS PhD,Illinois
+Shenlong Wang,https://shenlong.web.illinois.edu/,3D vision robotics perception,Not Sure,CIS PhD,Illinois
+Sasa Misailovic,https://misailo.cs.illinois.edu/,Approximate computing resilient compilers,Not Sure,CIS PhD,Illinois
+Edgar Solomonik,https://solomonik.cs.illinois.edu/,Parallel numerical algorithms tensor methods,Not Sure,CIS PhD,Illinois
+Romit Roy Choudhury,https://croy.web.engr.illinois.edu/,Mobile sensing wireless networking,Not Sure,CIS PhD,Illinois
+Nikola Banovic,https://www.nikolabanovic.net/,"HCI, computational interaction, trusted AI systems",Not Sure,CIS PhD,Michigan
+Nikhil Bansal,https://bansal.engin.umich.edu/,Algorithm design and discrete optimization,Not Sure,CIS PhD,Michigan
+Satinder Singh Baveja,https://web.eecs.umich.edu/~baveja/,Reinforcement learning and autonomous agents,Not Sure,CIS PhD,Michigan
+Valeria Bertacco,https://web.eecs.umich.edu/~valeria/,Reliable and secure specialized architectures,Not Sure,CIS PhD,Michigan
+Mark S. Ackerman,https://www.socialworldsresearch.org/eecs/ackerm,"CSCW, social computing, ubiquitous computing",Not Sure,CIS PhD,Michigan
+J. Alex Halderman,https://jhalderm.com/,Security & privacy with focus on election systems,Not Sure,CIS PhD,Michigan
+H. V. Jagadish,https://web.eecs.umich.edu/~jag/,"Database systems, big data and data science",Not Sure,CIS PhD,Michigan
+Rada Mihalcea,https://web.eecs.umich.edu/~mihalcea/,Natural language processing and social NLP,Not Sure,CIS PhD,Michigan
+Emily Mower Provost,https://emp.engin.umich.edu/,Speech emotion modeling and assistive AI,Not Sure,CIS PhD,Michigan
+Z. Morley Mao,https://web.eecs.umich.edu/~zmao/,"Mobile, networked systems, security and ML",Not Sure,CIS PhD,Michigan
+Kang G. Shin,https://web.eecs.umich.edu/~kgshin/,Real-time embedded/cyber-physical networking,Not Sure,CIS PhD,Michigan
+Michael P. Wellman,https://strategicreasoning.org/michael-p-wellman/,"Game-theoretic AI, electronic markets, auctions",Not Sure,CIS PhD,Michigan
+Scott Mahlke,https://web.eecs.umich.edu/~mahlke/,Compilers and customized processor design,Not Sure,CIS PhD,Michigan
+Danai Koutra,https://web.eecs.umich.edu/~dkoutra/,Large-scale graph mining and anomaly detection,Not Sure,CIS PhD,Michigan
+Jason Mars,https://www.jasonmars.org/,Conversational AI and cloud systems architecture,Not Sure,CIS PhD,Michigan
+Mark Guzdial,https://computinged.wordpress.com/about/,Computing education research and CS pedagogy,Not Sure,CIS PhD,Michigan
+Chris Peikert,https://web.eecs.umich.edu/~cpeikert/,Post-quantum lattice-based cryptography,Not Sure,CIS PhD,Michigan
+Paul Grubbs,https://web.eecs.umich.edu/~paulgrub/,"Applied cryptography and system security 
+EECS Department",Not Sure,CIS PhD,Michigan
+Ryan Huang,https://web.eecs.umich.edu/~ryanph/,"OS reliability and distributed storage systems 
+EECS Department",Not Sure,CIS PhD,Michigan
+Qing Qu,https://qingqu.engin.umich.edu/,Deep learning theory and nonconvex optimization,Not Sure,CIS PhD,Michigan
+Viswanath Nagarajan,https://viswa.engin.umich.edu/,Approximation algorithms and combinatorial optimization,Not Sure,CIS PhD,Michigan
+Karem A. Sakallah,https://web.eecs.umich.edu/~karem/,"SAT, formal verification, automated reasoning",Not Sure,CIS PhD,Michigan
+Thomas Wenisch,https://web.eecs.umich.edu/~twenisch/,"Warehouse-scale computer architecture, energy",Not Sure,CIS PhD,Michigan
+Lingjia Tang,https://lingjia.engin.umich.edu/,Datacenter systems and efficient AI/ML computing,Not Sure,CIS PhD,Michigan
+Mosharaf Chowdhury,https://mosharaf.com/,"AI/ML cloud systems, energy-efficient networking",Not Sure,CIS PhD,Michigan
+Jenna Wiens,https://wiens-group.engin.umich.edu/,Machine learning for patient risk and health data,Not Sure,CIS PhD,Michigan
+Peter Chen,https://web.eecs.umich.edu/~pmchen/,"Operating systems, virtualization, computer security",Not Sure,CIS PhD,Michigan
+Satish Narayanasamy,https://web.eecs.umich.edu/~nsatish/,"Program analysis, concurrency, secure architectures",Not Sure,CIS PhD,Michigan
+Roya Ensafi,https://ensa.fi/,Internet censorship measurement and network security,Not Sure,CIS PhD,Michigan
+David C. Parkes,https://parkes.seas.harvard.edu,Market design,Not Sure,CIS PhD,Harvard University
+Hanspeter Pfister,https://vcg.seas.harvard.edu,Graphics,Not Sure,CIS PhD,Harvard University
+Milind Tambe,https://teamcore.seas.harvard.edu,AI for social good,Not Sure,CIS PhD,Harvard University
+Leslie G. Valiant,https://people.seas.harvard.edu/~valiant,Theory of computation and learning,Not Sure,CIS PhD,Harvard University
+Boaz Barak,https://www.boazbarak.org,Cryptography,Not Sure,CIS PhD,Harvard University
+Michael D. Mitzenmacher,https://www.eecs.harvard.edu/~michaelm,Randomized algorithms,Not Sure,CIS PhD,Harvard University
+Salil P. Vadhan,https://people.seas.harvard.edu/~salil,Privacy,Not Sure,CIS PhD,Harvard University
+Cynthia Dwork,https://dwork.seas.harvard.edu,Differential privacy and algorithmic fairness,Not Sure,CIS PhD,Harvard University
+Finale Doshi-Velez,https://doshi.cs.harvard.edu,Interpretable ML for health and policy,Not Sure,CIS PhD,Harvard University
+Yiling Chen,https://yiling.seas.harvard.edu,Social computing,Not Sure,CIS PhD,Harvard University
+Stratos Idreos,https://stratos.seas.harvard.edu,Adaptive data systems and ML-driven databases,Not Sure,CIS PhD,Harvard University
+Krzysztof Z. Gajos,https://gajos.seas.harvard.edu,Human-computer interaction,Not Sure,CIS PhD,Harvard University
+Elena Glassman,https://elg.cs.harvard.edu,Programming-tools research and CS education,Not Sure,CIS PhD,Harvard University
+Stephen Chong,https://people.seas.harvard.edu/~chong,Secure programming languages and systems,Not Sure,CIS PhD,Harvard University
+Jim Waldo,https://waldo.seas.harvard.edu,Distributed systems and tech policy,Not Sure,CIS PhD,Harvard University
+Nada Amin,https://namin.net,Programming languages,Not Sure,CIS PhD,Harvard University
+Anurag Anshu,https://anuraganshu.com,Quantum algorithms and information theory,Not Sure,CIS PhD,Harvard University
+Flavio P. Calmon,https://flavio.calmon.org,Information theory,Not Sure,CIS PhD,Harvard University
+Hima Lakkaraju,https://himalakkaraju.github.io,Explainable ML and algorithmic fairness,Not Sure,CIS PhD,Harvard University
+Stephanie Gil,https://gillab.seas.harvard.edu,Resilient multi-robot and autonomous systems,Not Sure,CIS PhD,Harvard University
+Patrick Slade,https://biorobotics.harvard.edu,Assistive robotics and wearable devices,Not Sure,CIS PhD,Harvard University
+Yilun Du,https://yilundu.github.io,Generative models and embodied AI,Not Sure,CIS PhD,Harvard University
+Jonathan Frankle,https://jonathanfrankle.com,Neural network pruning and theory,Not Sure,CIS PhD,Harvard University
+Sham Kakade,https://sham.seas.harvard.edu,ML theory,Not Sure,CIS PhD,Harvard University
+Eddie Kohler,https://read.seas.harvard.edu,Operating systems,Not Sure,CIS PhD,Harvard University
+Minlan Yu,https://minlanyu.seas.harvard.edu,Data-center networking and programmable nets,Not Sure,CIS PhD,Harvard University
+David Alvarez-Melis,https://alvarez-melis.github.io,Interpretable ML for language and decisions,Not Sure,CIS PhD,Harvard University
+Demba Ba,https://neurodatadesign.github.io,Neural data analysis,Not Sure,CIS PhD,Harvard University
+Boris Kozinsky,https://kozinskygroup.seas.harvard.edu,Atomistic simulation and materials ML,Not Sure,CIS PhD,Harvard University
+Todd Zickler,https://www.seas.harvard.edu/~zickler,Computer vision and computational imaging,Not Sure,CIS PhD,Harvard University

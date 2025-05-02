@@ -6,78 +6,148 @@ import { FaUserCircle, FaSearch, FaTrashAlt, FaPlus } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import Joyride from "react-joyride";
 
+
+
+
 const schoolDB = [
-  {
-    name: "University Of Pennsylvania",
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Penn_Quakers_logo.svg',
-    lor: [
-      { name: "Prof. Andrew Head", sent: false },
-      { name: "Prof. Danae Metaxa", sent: false },
-      { name: "Prof. Chris Callison-Burch", sent: false }
-    ],
-  },
-  {
-    name: "Princeton University",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Princeton_seal.svg",
-    lor: [
-      { name: "Prof. Clara Thompson", sent: false },
-      { name: "Prof. David Nguyen", sent: false }
-    ],
-  },
+  // Ivy League
   {
     name: "Harvard University",
     logo: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Harvard_University_shield.svg",
-    lor: [
-      { name: "Prof. Emily Chen", sent: false },
-      { name: "Prof. Felix Moore", sent: false }
-    ],
-  },
-  {
-    name: "Stanford University",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stanford_Cardinal_logo.svg",
-    lor: [
-      { name: "Prof. Grace Wang", sent: false },
-      { name: "Prof. Henry Patel", sent: false }
-    ],
-  },
-  {
-    name: "MIT",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg",
-    lor: [
-      { name: "Prof. Irene Kim", sent: false },
-      { name: "Prof. James Park", sent: false }
-    ],
-  },
-  {
-    name: "Columbia University",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/02/Columbia_Lions_wordmark.png",
-    lor: [
-      { name: "Prof. Robert Smith", sent: false },
-      { name: "Prof. Sarah Connor", sent: false }
-    ]
+    checklist: { lor: false, sop: false, submitted: false }
   },
   {
     name: "Yale University",
     logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Yale_University_logo.svg",
-    lor: [
-      { name: "Prof. Michael Johnson", sent: false },
-      { name: "Prof. Linda White", sent: false }
-    ]
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "Princeton University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Princeton_seal.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "Columbia University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/02/Columbia_Lions_wordmark.png",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of Pennsylvania",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Penn_Quakers_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "Dartmouth College",
+    logo: "https://communications.dartmouth.edu/sites/communications/files/2024-07/d-pine-and-wordmark_2.jpg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "Brown University",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Brown_University_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
   },
   {
     name: "Cornell University",
     logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Cornell_%22C%22_logo.svg",
-    lor: [
-      { name: "Prof. William Brown", sent: false },
-      { name: "Prof. Emma Davis", sent: false }
-    ]
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+
+  // Top CS PhD Programs
+  {
+    name: "Massachusetts Institute of Technology",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "Stanford University",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Stanford_Cardinal_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "Carnegie Mellon University",
+    // fixed
+    logo: "https://www.drupal.org/files/CMU_Logo_Stack_Red.png",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of California, Berkeley",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/University_of_California%2C_Berkeley_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of Illinois Urbana-Champaign",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9c/University_of_Illinois_at_Urbana%E2%80%93Champaign_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of Washington",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/36/University_of_Washington_Purple_Block_W_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "Georgia Institute of Technology",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Georgia_Tech_Yellow_Jackets_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of Michigan, Ann Arbor",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Michigan_Wolverines_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of California, San Diego",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/UC_San_Diego_Tritons_wordmark.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of Southern California",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Trojans_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of Texas at Austin",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Texas_Longhorns_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
+  },
+  {
+    name: "University of Wisconsin–Madison",
+    // fixed
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Wisconsin_Badgers_logo.svg",
+    checklist: { lor: false, sop: false, submitted: false }
   }
 ];
+
+
 
 function Home() {
   const [schools, setSchools] = useState(() => {
     const saved = localStorage.getItem("savedSchools");
-    return saved ? JSON.parse(saved) : schoolDB.slice(0, 0);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return parsed.map((school) => ({
+          ...school,
+          checklist: {
+            lor: school.checklist?.lor || false,
+            sop: school.checklist?.sop || false,
+            submitted: school.checklist?.submitted || false
+          }
+        }));
+      } catch (e) {
+        console.error("Invalid saved data:", e);
+        return [];
+      }
+    }
+    return [];
   });
   const [searchTerm, setSearchTerm] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
@@ -153,12 +223,16 @@ function Home() {
     localStorage.setItem("savedSchools", JSON.stringify(updated));
   };
 
-  const handleToggleLorStatus = (schoolName, index) => {
+  const handleToggleChecklistItem = (schoolName, item) => {
     const updated = schools.map((school) => {
       if (school.name === schoolName) {
-        const newLor = [...school.lor];
-        newLor[index].sent = !newLor[index].sent;
-        return { ...school, lor: newLor };
+        return {
+          ...school,
+          checklist: {
+            ...school.checklist,
+            [item]: !school.checklist[item]
+          }
+        };
       }
       return school;
     });
@@ -263,17 +337,31 @@ function Home() {
                   <img src={school.logo} alt={`${school.name} logo`} className="school-logo"/>
                   <div className="school-info">
                     <h3>{school.name}</h3>
-                    <p><strong>Send SoP</strong></p>
-                    {school.lor.map((ref, i) => (
-                        <label key={i} className="lor-entry">
-                          <input
-                              type="checkbox"
-                              checked={ref.sent}
-                              onChange={() => handleToggleLorStatus(school.name, i)}
-                          />
-                          {ref.name} — {ref.sent ? "Submit Application ✅" : "Submit Application ⬛"}
-                        </label>
-                    ))}
+                    <p><strong>Application Progress</strong></p>
+                    <label className="lor-entry">
+                      <input
+                        type="checkbox"
+                        checked={school.checklist?.lor}
+                        onChange={() => handleToggleChecklistItem(school.name, "lor")}
+                      />
+                      Letters of Recommendation
+                    </label>
+                    <label className="lor-entry">
+                      <input
+                        type="checkbox"
+                        checked={school.checklist?.sop}
+                        onChange={() => handleToggleChecklistItem(school.name, "sop")}
+                      />
+                      Statement of Purpose
+                    </label>
+                    <label className="lor-entry">
+                      <input
+                        type="checkbox"
+                        checked={school.checklist?.submitted}
+                        onChange={() => handleToggleChecklistItem(school.name, "submitted")}
+                      />
+                      Application Submitted
+                    </label>
                   </div>
                   <div className="school-actions">
                     <Link to="/sop" className="sop-button-link">
@@ -307,7 +395,7 @@ function Home() {
                   <img src={school.logo} alt={`${school.name} logo`} className="school-logo" />
                   <div className="school-info">
                     <h3>{school.name}</h3>
-                    <p>{school.lor.length} Letters of Recommendation</p>
+                    <p>Track your application progress</p>
                   </div>
                   <div className="school-actions">
                     <button onClick={() => handleAddAvailableSchool(school)}><FaPlus/></button>
