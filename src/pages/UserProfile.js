@@ -15,12 +15,12 @@ function UserProfile() {
   const fileInputRef = useRef(null);
   const [fileInputKey, setFileInputKey] = useState(0);
 
-  const [education, setEducation] = useState(() => localStorage.getItem("profile_education") || "Lorem ipsum...");
-  const [research, setResearch] = useState(() => localStorage.getItem("profile_research") || "Lorem ipsum...");
-  const [experience, setExperience] = useState(() => localStorage.getItem("profile_experience") || "Lorem ipsum...");
-  const [skills, setSkills] = useState(() => localStorage.getItem("profile_skills") || "Lorem ipsum...");
-  const [interests, setInterests] = useState(() => localStorage.getItem("profile_interests") || "Lorem ipsum...");
-  const [additional, setAdditional] = useState(() => localStorage.getItem("profile_additional") || "Lorem ipsum...");
+  const [education, setEducation] = useState("");
+  const [research, setResearch] = useState("");
+  const [experience, setExperience] = useState("");
+  const [skills, setSkills] = useState("");
+  const [interests, setInterests] = useState("");
+  const [additional, setAdditional] = useState("");
   const [loading, setLoading] = useState(false);
   const [showSaveMessage, setShowSaveMessage] = useState(false);
   const [tutorialActive, setTutorialActive] = useState(false);
@@ -41,7 +41,12 @@ function UserProfile() {
   ];
 
   useEffect(() => {
-    // This effect is empty as per original code
+    setInterests(localStorage.getItem("profile_interests") || "");
+    setResearch(localStorage.getItem("profile_research") || "");
+    setEducation(localStorage.getItem("profile_education") || "");
+    setExperience(localStorage.getItem("profile_experience") || "");
+    setSkills(localStorage.getItem("profile_skills") || "");
+    setAdditional(localStorage.getItem("profile_additional") || "");
   }, []);
 
   const handleSave = () => {

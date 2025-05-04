@@ -8,13 +8,12 @@ function Welcome() {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    const wantsTutorial = window.confirm("Do you want to take a tutorial of the home page?");
-    if (wantsTutorial) {
-      // Navigate to home and pass state to trigger tutorial
-      navigate("/", { state: { showTutorial: true } });
-    } else {
-      navigate("/");
-    }
+    navigate("/");
+  };
+  
+  const handleStartTutorial = () => {
+    // Navigate to home and pass state to trigger tutorial
+    navigate("/", { state: { showTutorial: true } });
   };
 
   return (
@@ -31,16 +30,39 @@ function Welcome() {
         </Link>
       </header>
 
-      <main className="home-content">
-        <h1>Welcome to ApplyPhD!</h1>
-        <p>
+      <main className="welcome-content" style={{ 
+        textAlign: "center", 
+        maxWidth: "800px", 
+        margin: "0 auto", 
+        padding: "2rem 1rem" 
+      }}>
+        <h1 style={{ 
+          fontSize: "2.5rem", 
+          color: "#426E95", 
+          marginBottom: "2rem" 
+        }}>Welcome to ApplyPhD!</h1>
+        
+        <p style={{ 
+          fontSize: "1.2rem", 
+          lineHeight: "1.6", 
+          marginBottom: "1.5rem" 
+        }}>
           ApplyPhD is your personalized PhD application tracker. Easily add schools, track your letters of recommendation, and generate customized Statements of Purpose (SOPs).
         </p>
-        <p>
-          Ready to get started? Click below!
+        
+        <p style={{ 
+          fontSize: "1.2rem", 
+          marginBottom: "2.5rem" 
+        }}>
+          Ready to get started? Choose an option below!
         </p>
 
-        <div style={{ marginTop: "2rem" }}>
+        <div style={{ 
+          display: "flex", 
+          justifyContent: "center", 
+          gap: "1.5rem",
+          flexWrap: "wrap" 
+        }}>
           <button
             onClick={handleGetStarted}
             style={{
@@ -51,9 +73,38 @@ function Welcome() {
               borderRadius: "8px",
               border: "none",
               cursor: "pointer",
+              transition: "background-color 0.3s",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
             }}
+            onMouseOver={(e) => e.target.style.backgroundColor = "#355980"}
+            onMouseOut={(e) => e.target.style.backgroundColor = "#426E95"}
           >
             Get Started
+          </button>
+          
+          <button
+            onClick={handleStartTutorial}
+            style={{
+              backgroundColor: "#ffffff",
+              color: "#426E95",
+              padding: "1rem 2rem",
+              fontSize: "1.2rem",
+              borderRadius: "8px",
+              border: "2px solid #426E95",
+              cursor: "pointer",
+              transition: "all 0.3s",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = "#f0f7ff";
+              e.target.style.boxShadow = "0 4px 8px rgba(0,0,0,0.15)";
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = "#ffffff";
+              e.target.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+            }}
+          >
+            Start Homepage Tutorial
           </button>
         </div>
       </main>
