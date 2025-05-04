@@ -364,7 +364,10 @@ function Home() {
                     </label>
                   </div>
                   <div className="school-actions">
-                    <Link to="/sop" className="sop-button-link">
+                    {/*<Link to="/sop" className="sop-button-link">*/}
+                    {/*  <button className="sop-button">SOP Tool</button>*/}
+                    {/*</Link>*/}
+                    <Link to="/sop" state={{ schoolName: school.name }} className="sop-button-link">
                       <button className="sop-button">SOP Tool</button>
                     </Link>
                     <FaTrashAlt className="delete-icon" onClick={() => handleDeleteSchool(school.name)}/>

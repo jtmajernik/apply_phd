@@ -1,10 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./SopGenerator.css";
 import logo from "../assets/logo.png";
 import { FaUserCircle } from "react-icons/fa";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf";
 import {Link, useNavigate} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Joyride from "react-joyride"; // Added import for Joyride
+import Papa from "papaparse";
+import professorCSV from "../professors_final_combined2.csv"; // Make sure it's placed under /src/assets
 
 // Set the worker for PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
@@ -12,6 +15,8 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.j
 const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 function SopGenerator() {
+  const location = useLocation();
+  const schoolName = location.state?.schoolName || "Default School";
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
   const [dragOver, setDragOver] = useState(false);
@@ -20,9 +25,10 @@ function SopGenerator() {
     {
       id: Date.now(),
       name: "",
-      researchInterests: ["HCI"],
+      researchInterests: [],
       program: "CIS PhD",
       interviewSent: "Not Sure",
+      personalWebsite: "",
     },
   ]);
 
@@ -56,11 +62,28 @@ function SopGenerator() {
     },
   ];
 
-  const professorOptions = [
-    "Andrew Head",
-    "Danaë Metaxa",
-    "Chris Callison-Burch",
-  ];
+const [professorOptions, setProfessorOptions] = useState([]);
+
+useEffect(() => {
+  fetch(professorCSV)
+    .then((response) => response.text())
+    .then((csvText) => {
+      const result = Papa.parse(csvText, { header: true });
+      const filtered = result.data
+        .filter((row) => row.school === schoolName && row.professor_name)
+        .map((row) => ({
+          name: row.professor_name,
+          researchInterests: row.research_interests || "",
+          personalWebsite: row.personal_website || "",
+        }));
+      setProfessorOptions(filtered);
+    })
+    .catch((error) => {
+      console.error("Failed to load professor CSV:", error);
+      setProfessorOptions([]);
+    });
+}, [schoolName]);
+
   const researchInterestOptions = ["HCI"];
 
   const handleDragOver = (event) => {
@@ -92,8 +115,19 @@ function SopGenerator() {
   };
 
   const handleProfessorNameChange = (id, value) => {
+    const selected = professorOptions.find((prof) => prof.name === value);
     setProfessorsData((prev) =>
-      prev.map((prof) => (prof.id === id ? { ...prof, name: value } : prof))
+      prev.map((prof) =>
+        prof.id === id
+          ? {
+              ...prof,
+              name: value,
+              researchInterests:
+                selected?.researchInterests?.split(",").map(s => s.trim()).filter(Boolean) || [],
+              personalWebsite: selected?.personalWebsite || "",
+            }
+          : prof
+      )
     );
   };
 
@@ -123,9 +157,10 @@ function SopGenerator() {
     const newRow = {
       id: Date.now(),
       name: "",
-      researchInterests: ["HCI"],
+      researchInterests: [],
       program: "CIS PhD",
       interviewSent: "Not Sure",
+      personalWebsite: "",
     };
     setProfessorsData((prev) => [...prev, newRow]);
   };
@@ -278,38 +313,30 @@ Review the SOP and provide a list of specific changes that I can make to improve
             {professorsData.map((row) => (
               <tr key={row.id}>
                 <td>
-                  <select
-                    value={row.name}
-                    onChange={(e) =>
-                      handleProfessorNameChange(row.id, e.target.value)
-                    }
-                    className="beautiful-select"
-                  >
-                    <option value="">Select a Professor</option>
-                    {professorOptions.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', whiteSpace: 'nowrap', overflow: 'hidden' }}>
+                    <select
+                      value={row.name}
+                      onChange={(e) => handleProfessorNameChange(row.id, e.target.value)}
+                      className="beautiful-select"
+                    >
+                      <option value="">Select a Professor</option>
+                      {professorOptions.map((option) => (
+                        <option key={option.name} value={option.name}>
+                          {option.name}
+                        </option>
+                      ))}
+                    </select>
+                    {row.personalWebsite && (
+                      <a href={row.personalWebsite} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.9rem' }}>
+                        [personal website]
+                      </a>
+                    )}
+                  </div>
                 </td>
                 <td>
-                  <select
-                    value={row.researchInterests}
-                    onChange={(e) =>
-                      handleResearchInterestsChange(
-                        row.id,
-                        Array.from(e.target.selectedOptions, (option) => option.value)
-                      )
-                    }
-                    className="beautiful-select"
-                  >
-                    {researchInterestOptions.map((interest) => (
-                      <option key={interest} value={interest}>
-                        {interest}
-                      </option>
-                    ))}
-                  </select>
+                  <div style={{ padding: '8px' }}>
+                    {row.researchInterests.length > 0 ? row.researchInterests.join(", ") : ""}
+                  </div>
                 </td>
                 <td>
                   <select
