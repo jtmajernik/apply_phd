@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import "./SopGenerator.css";
 import logo from "../assets/logo.png";
 import { FaUserCircle } from "react-icons/fa";
@@ -12,7 +12,6 @@ import ReactMarkdown from 'react-markdown';
 
 // Set the worker for PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
-
 const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
 function SopGenerator() {
@@ -47,7 +46,6 @@ function SopGenerator() {
 
   const [sopRefinement, setSopRefinement] = useState("");
   const [sopFile, setSopFile] = useState(null);
-  const [sopOutput, setSopOutput] = useState("");
   const [displayedSopOutput, setDisplayedSopOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [tutorialActive, setTutorialActive] = useState(false); // New state for tutorialActive
@@ -112,45 +110,10 @@ useEffect(() => {
 // Create a ref to store the checksum
 const profileChecksumRef = useRef("");
 
-// Update useEffect for fetching professors to depend on userProfileVersion
-useEffect(() => {
-  fetch(professorCSV)
-    .then((response) => response.text())
-    .then((csvText) => {
-      const result = Papa.parse(csvText, { header: true });
-      const filtered = result.data
-        .filter((row) => row.school === schoolName && row.professor_name)
-        .map((row) => ({
-          name: row.professor_name,
-          researchInterests: row.research_interests || "",
-          personalWebsite: row.personal_website || "",
-          matchScore: 0,
-        }));
-      
-      // Calculate similarity scores and sort professors
-      const rankedProfessors = rankProfessorsByInterestSimilarity(filtered);
-      setProfessorOptions(rankedProfessors);
-      
-      // Add debugging to see what's happening
-      console.log("User profile data:", {
-        interests: localStorage.getItem("profile_interests"),
-        research: localStorage.getItem("profile_research"),
-        education: localStorage.getItem("profile_education")
-      });
-      console.log("Top 5 recommended professors:", rankedProfessors.slice(0, 5).map(p => ({
-        name: p.name,
-        score: p.matchScore,
-        interests: p.researchInterests
-      })));
-    })
-    .catch((error) => {
-      console.error("Failed to load professor CSV:", error);
-      setProfessorOptions([]);
-    });
-}, [schoolName, userProfileVersion]); // Added userProfileVersion dependency
+// Move these function definitions to the top of the component, before they're used
 
-// Function to calculate similarity between two text strings
-const calculateSimilarity = (text1, text2) => {
+// Wrap calculateSimilarity in useCallback
+const calculateSimilarity = useCallback((text1, text2) => {
   if (!text1 || !text2) return 0;
   
   // Normalize texts - lowercase, remove extra spaces
@@ -221,9 +184,10 @@ const calculateSimilarity = (text1, text2) => {
   
   // Base similarity score + extra score from phrases and keywords
   return (intersection.size / union.size) + extraScore;
-};
+}, []);
 
-const rankProfessorsByInterestSimilarity = (professors) => {
+// Now define rankProfessorsByInterestSimilarity with calculateSimilarity in its deps
+const rankProfessorsByInterestSimilarity = useCallback((professors) => {
   // Get user interests and research from localStorage
   const userInterests = localStorage.getItem("profile_interests") || "";
   const userResearch = localStorage.getItem("profile_research") || "";
@@ -250,9 +214,7 @@ const rankProfessorsByInterestSimilarity = (professors) => {
   scoredProfessors.sort((a, b) => b.matchScore - a.matchScore);
   
   return scoredProfessors;
-};
-
-  const researchInterestOptions = ["HCI"];
+}, [calculateSimilarity]);
 
   const handleDragOver = (event) => {
     event.preventDefault();
@@ -295,28 +257,6 @@ const rankProfessorsByInterestSimilarity = (professors) => {
               personalWebsite: selected?.personalWebsite || "",
             }
           : prof
-      )
-    );
-  };
-
-  const handleResearchInterestsChange = (id, selectedOptions) => {
-    setProfessorsData((prev) =>
-      prev.map((prof) =>
-        prof.id === id ? { ...prof, researchInterests: selectedOptions } : prof
-      )
-    );
-  };
-
-  const handleProgramChange = (id, value) => {
-    setProfessorsData((prev) =>
-      prev.map((prof) => (prof.id === id ? { ...prof, program: value } : prof))
-    );
-  };
-
-  const handleInterviewSentChange = (id, value) => {
-    setProfessorsData((prev) =>
-      prev.map((prof) =>
-        prof.id === id ? { ...prof, interviewSent: value } : prof
       )
     );
   };
@@ -517,7 +457,6 @@ const rankProfessorsByInterestSimilarity = (professors) => {
 
       const data = await response.json();
       const generatedText = data?.choices?.[0]?.message?.content || "";
-      setSopOutput(generatedText);
       
       // Use the typewriter effect again
       typeWriterEffect(generatedText);
@@ -544,6 +483,43 @@ const rankProfessorsByInterestSimilarity = (professors) => {
     // Save professorsData to localStorage whenever it changes
     localStorage.setItem(`professors_${schoolName}`, JSON.stringify(professorsData));
   }, [professorsData, schoolName]);
+
+  // Now the useEffect can safely reference rankProfessorsByInterestSimilarity
+  useEffect(() => {
+    fetch(professorCSV)
+      .then((response) => response.text())
+      .then((csvText) => {
+        const result = Papa.parse(csvText, { header: true });
+        const filtered = result.data
+          .filter((row) => row.school === schoolName && row.professor_name)
+          .map((row) => ({
+            name: row.professor_name,
+            researchInterests: row.research_interests || "",
+            personalWebsite: row.personal_website || "",
+            matchScore: 0,
+          }));
+        
+        // Calculate similarity scores and sort professors
+        const rankedProfessors = rankProfessorsByInterestSimilarity(filtered);
+        setProfessorOptions(rankedProfessors);
+        
+        // Add debugging to see what's happening
+        console.log("User profile data:", {
+          interests: localStorage.getItem("profile_interests"),
+          research: localStorage.getItem("profile_research"),
+          education: localStorage.getItem("profile_education")
+        });
+        console.log("Top 5 recommended professors:", rankedProfessors.slice(0, 5).map(p => ({
+          name: p.name,
+          score: p.matchScore,
+          interests: p.researchInterests
+        })));
+      })
+      .catch((error) => {
+        console.error("Failed to load professor CSV:", error);
+        setProfessorOptions([]);
+      });
+  }, [schoolName, userProfileVersion, rankProfessorsByInterestSimilarity]);
 
   return (
     <div className="sop-page">
