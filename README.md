@@ -19,28 +19,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### 1. Clone the repository
 
-```bash
 git clone https://github.com/your-username/applyphd.git
 cd applyphd
-2. Install dependencies
-bash
-Copy
-Edit
-npm install
-Install required PDF parsing dependency:
 
-bash
-Copy
-Edit
-npm install pdfjs-dist@2.16.105
-3. Set up your OpenAI API key
+### 2. Install dependencies
+
+npm install
+
+### 3. Set up your OpenAI API key
 Create a .env file in the root directory with the following content:
 
-env
-Copy
-Edit
 REACT_APP_OPENAI_API_KEY=your_openai_api_key_here
-💻 Available Scripts
+
+### 4. Available Scripts
+
 In the project directory, you can run:
 
 npm start
