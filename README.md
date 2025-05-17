@@ -1,3 +1,36 @@
+**ApplyPhD** is a personalized PhD application tracker and guidance tool. Easily manage your target schools, keep track of letters of recommendation, generate customized Statements of Purpose (SOPs), and discover dynamic professor recommendations based on your research interests.
+
+---
+
+## 🚀 Features
+
+- **School Tracker:** Add, edit, and organize target PhD programs.
+- **Professor Matching:** Get suggestions for professors aligned with your research interests.
+- **SOP Generator:** Automatically draft and customize your Statement of Purpose for each school.
+- **Document Tracker:** Keep tabs on required documents and recommendation letters.
+- **User-Friendly Interface:** Clean, responsive design for easy navigation.
+
+---
+
+## 🖼️ Preview
+
+<p align="center">
+  <img src="./src/assets/logo.png" alt="ApplyPhD Logo" width="120" />
+</p>
+
+<p align="center">
+  <img src="./src/assets/applyphd_screen.PNG" alt="ApplyPhD Home Screen" width="600" />
+</p>
+
+<!-- Demo Video -->
+<p align="center">
+  <!-- If you have a video file or YouTube link, embed it below. For now, provide a placeholder. -->
+  <!-- Example: <a href="https://youtu.be/your-demo-link" target="_blank">▶️ Watch Demo Video</a> -->
+  <a href="./src/assets/final_demo (1) - Shortcut.lnk">▶️ Watch Demo Video (Windows Shortcut)</a>
+</p>
+
+---
+
 # ApplyPhD
 
 **ApplyPhD** is your personalized PhD application tracker.  
@@ -53,9 +86,9 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 npm run eject
-Note: This is a one-way operation. Once you eject, you can’t go back!
+Note: This is a one-way operation. Once you eject, you can't go back!
 
-If you aren’t satisfied with the build tool and configuration choices, you can eject at any time.
+If you aren't satisfied with the build tool and configuration choices, you can eject at any time.
 This command will copy all configuration files and dependencies into your project so you have full control over them.
 
 Customize Professors & Schools
