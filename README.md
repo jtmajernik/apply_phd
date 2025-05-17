@@ -17,16 +17,13 @@
 <p align="center">
   <img src="./src/assets/logo.png" alt="ApplyPhD Logo" width="120" />
 </p>
-
-<p align="center">
-  <img src="./src/assets/applyphd_screen.PNG" alt="ApplyPhD Home Screen" width="600" />
-</p>
-
 <!-- Demo Video -->
 <p align="center">
-  <!-- If you have a video file or YouTube link, embed it below. For now, provide a placeholder. -->
-  <!-- Example: <a href="https://youtu.be/your-demo-link" target="_blank">▶️ Watch Demo Video</a> -->
-  <a href="./src/assets/final_demo (1) - Shortcut.lnk">▶️ Watch Demo Video (Windows Shortcut)</a>
+  <a href="https://vimeo.com/1085162631?share=copy" target="_blank">
+    <img src="./src/assets/applyphd_screen.PNG" alt="Demo Video Thumbnail" width="600" />
+    <br>
+    ▶️ Watch Demo Video on Vimeo
+  </a>
 </p>
 
 ---
